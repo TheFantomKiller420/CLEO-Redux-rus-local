@@ -3,7 +3,7 @@
 [![Discord](https://img.shields.io/discord/911487285990674473?style=for-the-badge)](https://discord.gg/d5dZSfgBZr)
 [![YouTube Channel](https://img.shields.io/badge/YouTube-Channel-FF0000?style=for-the-badge)](https://www.youtube.com/playlist?list=PLNxQuEFtVkeizoLEQiok7qzr1f0mcwfFb)
 
-- [Начало](#getting-started)
+- [Начало](#начало)
 	- [Что такое CLEO Redux?]
 	- [Поддерживаемые языки]
 	- [Поддерживаемые релизы]
