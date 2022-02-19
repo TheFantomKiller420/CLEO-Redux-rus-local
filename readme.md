@@ -75,3 +75,11 @@ CLEO Redux ориентируется на JavaScript как на основно
 - GTA III 1.0
 - GTA Vice City 1.0
 - GTA San Andreas 1.0 (только с [CLEO 4.4](https://github.com/cleolibrary/CLEO4))
+
+Ремастеры (The Trilogy):
+
+- GTA III 1.0.0.14718
+- GTA Vice City 1.0.0.14718
+- San Andreas 1.0.0.14296, 1.0.0.14388, 1.0.0.14718 (Название обновления 1.03)
+
+Подробнее см. [Часто задаваемые вопросы по окончательному изданию] (the-finitive-edition-faq.md).
