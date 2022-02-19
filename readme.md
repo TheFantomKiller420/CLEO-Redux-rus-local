@@ -82,4 +82,4 @@ CLEO Redux ориентируется на JavaScript как на основно
 - GTA Vice City 1.0.0.14718
 - San Andreas 1.0.0.14296, 1.0.0.14388, 1.0.0.14718 (Название обновления 1.03)
 
-Подробнее см. [Часто задаваемые вопросы по окончательному изданию](the-finitive-edition-faq.md).
+Подробнее см. [Часто задаваемые вопросы по окончательному изданию](https://github.com/TheFantomKiller420/CLEO-Redux/blob/master/the-definitive-edition-faq.md).
