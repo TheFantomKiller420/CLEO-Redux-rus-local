@@ -31,8 +31,8 @@
 	- [Добавление нового скрипта](#добавление-нового-скрипта)
 	- [Удаление скрипта](#удаление-скрипта)
 	- [Пользовательские команды](#пользовательские-команды)
-	- [Написание CS-скриптов]()
-	- [Написание JS-скриптов]()
+	- [Написание CS-скриптов](#написание-cs-скриптов)
+	- [Написание JS-скриптов](#написание-js-скриптов)
 	- [Интеграция с кодом Visual Studio]()
 
 - [Поддержка JavaScript]()
@@ -240,8 +240,10 @@ tail -f cleo_redux.log
 - 0AA8 [CALL_METHOD_RETURN](https://library.sannybuilder.com/#/gta3/CLEO/0AA8) (**UNSAFE** - требует `mem` разрешение)
 - 0AB0 [IS_KEY_PRESSED](https://library.sannybuilder.com/#/gta3/CLEO/0AB0)
 
+### Написание CS-скриптов
 
+Используйте [Sanny Builder 3](https://sannybuilder.com) в режимах редактирования GTA III, GTA VC или GTA SA соответственно. Посетите [эту страницу](https://cleo.li/scripts.html) для получения дополнительной информации.
 
+[Проверьте Часто Задаваемые Вопросы](the-definitive-edition-faq.md#how-do-i-compile-cleo-scripts-with-sanny-builder) для получения информации о поддержке CS в обновленных играх.
 
-
-
+### Writing JS scripts
