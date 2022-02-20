@@ -426,7 +426,49 @@ import { PedType } from "./includes/types"; // импортируем имено
 import data from "./vehicles.json"; // импортируем cars.json как значение JavaScript (массив, объект).
 ```
 
+В настоящее время поддерживается только импорт файлов `.js` (`.mjs`) и `.json`.
 
+### Пользовательские привязки
+
+Следующие переменные и функции доступны только в коде JavaScript.
+
+- `GAME` - идентификатор текущей игры. Возможные значения: `gta3`, `vc`, `re3`, `reVC`, `sa`, `gta3_unreal`, `vc_unreal`, `sa_unreal` 
+
+```js
+if (GAME === "gta3") {
+  showTextBox("This is GTA III");
+}
+if (GAME === "sa") {
+  showTextBox("This is San Andreas");
+}
+if (GAME === "sa_unreal") {
+  showTextBox("This is San Andreas: The Definitive Edition");
+}
+```
+
+- `ONMISSION` - глобальный флаг, определяющий, находится ли игрок в данный момент на миссии.
+
+```js
+if (!ONMISSION) {
+  showTextBox("Not on a mission. Setting ONMISSION to true");
+  ONMISSION = true;
+}
+```
+
+- `TIMERA` и `TIMERB` - два автоматически увеличивающихся таймера, полезных для измерения временных интервалов.
+
+```js
+while (true) {
+  TIMERA = 0;
+  // ждём 1000 мс
+  while (TIMERA < 1000) {
+    wait(0);
+  }
+  showTextBox("1 second passed");
+}
+```
+
+- `log(...values)` - печатает разделенные запятыми `{values}` в `cleo_redux.log`
 
 
 
