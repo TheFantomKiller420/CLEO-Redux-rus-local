@@ -327,4 +327,23 @@ CLEO Redux поддерживает все внутриигровые коман
 
 Чтобы не смешивать их, CLEO Redux использует класс `ScriptObject` вместо класса `Object` из библиотеки с [тем же интерфейсом](https://library.sannybuilder.com/#/gta3/classes/Object).
 
+```js
+var x = ScriptObject.Create(modelId, x, y, z); // opcode 0107, creates a new object in the game
+
+var x = Object.create(null); // native JavaScript code, creates a new object in JS memory
+```
+
+#### Мат. классы
+
+
+
+
+
+
+
+
+
+
+
+
 
