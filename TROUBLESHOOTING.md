@@ -1,11 +1,11 @@
-## CLEO does not work with re3 or reVC
+## CLEO не работает с re3 или reVC
 
-Check out [this information](https://github.com/cleolibrary/CLEO-Redux#compatibility-with-re3-and-revc).
+Ознакомьтесь с [этой информацией](https://github.com/cleolibrary/CLEO-Redux#compatibility-with-re3-and-revc).
 
-## Game crash with CLEO on San Andreas: The Definitive Edition
+## Краш игры с CLEO на San Andreas: The Definitive Edition
 
-- make sure you installed the 64-bit version of Ultimate ASI Loader ([direct link to the latest release](https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/x64-latest/version.zip)).
-  - Put `version.dll` to `GTA San Andreas - Definitive Edition\Gameface\Binaries\Win64`)
+- Убедитесь, что вы установили 64-битную версию Ultimate ASI Loader ([прямая ссылка на последний релиз](https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/x64-latest/version.zip)).
+  - Поместите `version.dll` в (`GTA San Andreas - Definitive Edition\Gameface\Binaries\Win64`)
 - make sure you run the latest CLEO Redux version (0.8.2 and above)
 - delete config files from `Documents\Rockstar Games\GTA San Andreas Definitive Edition\Config\WindowsNoEditor`
 - run the game (or Rockstar Games Launcher) as administrator
