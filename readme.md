@@ -323,7 +323,7 @@ CLEO Redux поддерживает все внутриигровые коман
 
 #### Класс ScriptObject против объекта
 
-Библиотека Sanny Builder определяет статический класс `Object` для группировки команд, позволяющих создавать и управлять трехмерными объектами в игре. В то же время в JavaScript есть [собственный класс Object] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) со своими методами.
+Библиотека Sanny Builder определяет статический класс `Object` для группировки команд, позволяющих создавать и управлять трехмерными объектами в игре. В то же время в JavaScript есть [собственный класс Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) со своими методами.
 
 Чтобы не смешивать их, CLEO Redux использует класс `ScriptObject` вместо класса `Object` из библиотеки с [тем же интерфейсом](https://library.sannybuilder.com/#/gta3/classes/Object).
 
