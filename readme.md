@@ -339,7 +339,28 @@ var x = Object.create(null); // native JavaScript code, creates a new object in 
 
 Приоритет отдавался нативному коду в тех случаях, когда он обеспечивал ту же функциональность, что и опкоды скрипта. Например, чтобы вычислить абсолютное значение числа, используйте собственный [Math.abs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/abs), а не [Math.Abs](https://library.sannybuilder.com/#/gta3?q=%22abs%22). См. [Использование математики](using-math.md) для более подробной информации. 
 
+#### Свободный интерфейс
 
+Методы конструируемых сущностей (таких как `Player`, `Car`, `Char` – любые сущности, созданные с помощью метода конструктора) поддерживают цепочку (также известную как Fluent Interface). Это позволяет писать такой код:
+
+```js
+var p = new Player(0);
+
+p.giveWeapon(2, 100)
+  .setHealth(5)
+  .setCurrentWeapon(2)
+  .getChar()
+  .setCoordinates(1144, -600, 14)
+  .setBleeding(true);
+```
+
+Посмотреть демонстрацию: https://www.youtube.com/watch?v=LLgJ0fWbklg.
+
+Методы деструктора прерывают цепочку. Например. учитывая код:
+
+`Char.Create(0, 0, 0, 0, 0).setCoordinates(0, 0, 0).delete()`
+
+Цепочка не может продолжаться после метода удаления, так как символ удаляется, а его дескриптор больше не действителен.
 
 
 
