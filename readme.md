@@ -296,8 +296,8 @@ CLEO Redux генерирует типизации для всех поддер�
 
 ```js
 while (true) {
-  // meaningless infinite loop normally freezing the game
-  // will be terminated after two seconds
+  // бессмысленный бесконечный цикл, обычно зависающий в игре
+  // будет завершено через две секунды
 }
 ```
 
@@ -306,7 +306,7 @@ while (true) {
 ```js
 while (true) {
   wait(250);
-  // still meaningless, but does not freeze the game
+  // все равно бессмысленно, но не зависает в игре
 }
 ```
 
@@ -321,9 +321,9 @@ CLEO Redux поддерживает все внутриигровые коман
 Чтобы не смешивать их, CLEO Redux использует класс `ScriptObject` вместо класса `Object` из библиотеки с [тем же интерфейсом](https://library.sannybuilder.com/#/gta3/classes/Object).
 
 ```js
-var x = ScriptObject.Create(modelId, x, y, z); // opcode 0107, creates a new object in the game
+var x = ScriptObject.Create(modelId, x, y, z); // код операции 0107, создает новый объект в игре
 
-var x = Object.create(null); // native JavaScript code, creates a new object in JS memory
+var x = Object.create(null); // собственный код JavaScript, создает новый объект в памяти JS
 ```
 
 #### Мат. классы
