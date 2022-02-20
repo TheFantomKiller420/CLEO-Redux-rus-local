@@ -150,3 +150,6 @@ CLEO Redux поддерживает только «Windows D3D9 MSS 32bit» ве
 - Удалите `cleo_redux.asi` (или `cleo_redux64.asi`).
 - Удалите папку `CLEO` (необязательно).
 - Удалите `cleo_redux.log` (необязательно).
+
+## Конфигурация
+
