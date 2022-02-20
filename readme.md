@@ -246,4 +246,4 @@ tail -f cleo_redux.log
 
 [Проверьте Часто Задаваемые Вопросы](the-definitive-edition-faq.md#how-do-i-compile-cleo-scripts-with-sanny-builder) для получения информации о поддержке CS в обновленных играх.
 
-### Writing JS scripts
+### Написание JS-скриптов
