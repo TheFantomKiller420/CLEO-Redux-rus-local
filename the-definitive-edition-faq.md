@@ -7,7 +7,7 @@
 - [Есть ли отличия от поддержки классических игр?](#есть-ли-отличия-от-поддержки-классических-игр)
 - [Могу ли я использовать оригинальные опкоды?](#могу-ли-я-использовать-оригинальные-опкоды)
 - [Как узнать, какие команды можно использовать в JavaScript?](#как-узнать-какие-команды-можно-использовать-в-javascript)
-- [Can I use CLEO opcodes?](#can-i-use-cleo-opcodes)
+- [Могу ли я использовать опкоды CLEO?](#могу-ли-я-использовать-опкоды-cleo)
 - [Can I work with the game memory or call the game functions?](#can-i-work-with-the-game-memory-or-call-the-game-functions)
 - [How do I compile CLEO scripts with Sanny Builder?](#how-do-i-compile-cleo-scripts-with-sanny-builder)
 - [I can't find an answer to my question here, where do I go?](#i-cant-find-an-answer-to-my-question-here-where-do-i-go)
@@ -56,9 +56,9 @@
 
 Обновите имя файла соответственно в зависимости от того, для какой игры предназначен ваш скрипт.
 
-### Can I use CLEO opcodes?
+### Могу ли я использовать опкоды CLEO?
 
-Opcodes from CLEO Library (CLEO 4 or CLEO for GTA III and Vice City) are not supported. But CLEO Redux adds its own new opcodes for some operations.
+Опкоды из библиотеки CLEO (CLEO 4 или CLEO для GTA III и Vice City) не поддерживаются. Но CLEO Redux добавляет свои новые опкоды для некоторых операций.
 
   - 0C00 [IS_KEY_PRESSED](https://library.sannybuilder.com/#/sa_unreal/CLEO/0C00)
   - 0C01 [INT_ADD](https://library.sannybuilder.com/#/sa_unreal/CLEO/0C01)
@@ -66,12 +66,12 @@ Opcodes from CLEO Library (CLEO 4 or CLEO for GTA III and Vice City) are not sup
   - 0C03 [INT_MUL](https://library.sannybuilder.com/#/sa_unreal/CLEO/0C03)
   - 0C04 [INT_DIV](https://library.sannybuilder.com/#/sa_unreal/CLEO/0C04)
   - 0C05 [TERMINATE_THIS_CUSTOM_SCRIPT](https://library.sannybuilder.com/#/sa_unreal/CLEO/0C05)
-  - 0C06 [WRITE_MEMORY](https://library.sannybuilder.com/#/sa_unreal/CLEO/0C06) (**UNSAFE** - requires `mem` permission)
-  - 0C07 [READ_MEMORY](https://library.sannybuilder.com/#/sa_unreal/CLEO/0C07) (**UNSAFE** - requires `mem` permission)
-  - 0C08 [CALL_FUNCTION](https://library.sannybuilder.com/#/sa_unreal/CLEO/0C08) (**UNSAFE** - requires `mem` permission)
-  - 0C09 [CALL_FUNCTION_RETURN](https://library.sannybuilder.com/#/sa_unreal/CLEO/0C09) (**UNSAFE** - requires `mem` permission)
+  - 0C06 [WRITE_MEMORY](https://library.sannybuilder.com/#/sa_unreal/CLEO/0C06) (**UNSAFE** - требует `mem` разрешение)
+  - 0C07 [READ_MEMORY](https://library.sannybuilder.com/#/sa_unreal/CLEO/0C07) (**UNSAFE** - требует `mem` разрешение)
+  - 0C08 [CALL_FUNCTION](https://library.sannybuilder.com/#/sa_unreal/CLEO/0C08) (**UNSAFE** - требует `mem` разрешение)
+  - 0C09 [CALL_FUNCTION_RETURN](https://library.sannybuilder.com/#/sa_unreal/CLEO/0C09) (**UNSAFE** - требует `mem` разрешение)
 
-Note that Sanny Builder does not support these new opcodes out-of-the-box yet. To enable new opcodes in your CS scripts add the following lines on top of your script:
+Обратите внимание, что Sanny Builder еще не поддерживает эти новые коды операций «из коробки». Чтобы включить новые коды операций в ваших сценариях CS, добавьте следующие строки поверх вашего сценария:
 
 ```
 {$O 0C00=1,  is_key_pressed %1d% }
