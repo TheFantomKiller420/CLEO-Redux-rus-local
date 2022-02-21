@@ -4,7 +4,7 @@
 - [Как установить CLEO Redux в The Definitive Edition?](#как-установить-cleo-redux-в-the-definitive-edition)
 - [Что делать, если я не могу найти каталог CLEO?](#что-делать-если-я-не-могу-найти-каталог-cleo)
 - [Как удалить CLEO Redux?](#как-удалить-cleo-redux)
-- [Is there any difference from support of the classic games?](#is-there-any-difference-from-support-of-the-classic-games)
+- [Есть ли отличия от поддержки классических игр?](#есть-ли-отличия-от-поддержки-классических-игр)
 - [Can I use original opcodes?](#can-i-use-original-opcodes)
 - [How do I know what commands can I use in JavaScript?](#how-do-i-know-what-commands-can-i-use-in-javascript)
 - [Can I use CLEO opcodes?](#can-i-use-cleo-opcodes)
@@ -36,9 +36,9 @@
 - Удалите папку `CLEO` (необязательно).
 - Удалите `cleo_redux.log` (необязательно)
 
-### Is there any difference from support of the classic games?
+### Есть ли отличия от поддержки классических игр?
 
-There is. CLEO does not display the version in the game menu. Also CLEO can run only JS scripts in GTA III and GTA VC. In San Andreas both CS and JS scripts are supported.
+Есть. CLEO не отображает версию в меню игры. Также CLEO может запускать только JS-скрипты в GTA III и GTA VC. В San Andreas поддерживаются как скрипты CS, так и JS.
 
 ### Can I use original opcodes?
 
