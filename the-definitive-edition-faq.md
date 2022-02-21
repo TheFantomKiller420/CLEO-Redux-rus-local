@@ -1,8 +1,8 @@
 Здесь вы можете найти ответы на часто задаваемые вопросы о поддержке ремастера The Trilogy.
 
 - [Какие версии поддерживаются?](#какие-версии-поддерживаются)
-- [How to install CLEO Redux in The Definition Edition?](#how-to-install-cleo-redux-in-the-definition-edition)
-- [What if I can't find the CLEO directory?](#what-if-i-cant-find-the-cleo-directory)
+- [Как установить CLEO Redux в The Definitive Edition?](#как-установить-cleo-redux-в-the-definition-edition)
+- [Что делать, если я не могу найти каталог CLEO?](#что-делать-если-я-не-могу-найти-каталог-cleo)
 - [How to uninstall CLEO Redux?](#how-to-uninstall-cleo-redux)
 - [Is there any difference from support of the classic games?](#is-there-any-difference-from-support-of-the-classic-games)
 - [Can I use original opcodes?](#can-i-use-original-opcodes)
@@ -18,14 +18,15 @@
 - GTA Vice City: The Definitive Edition **1.0.0.14718** 
 - San Andreas: The Definitive Edition **1.0.0.14296**, **1.0.0.14388**, **1.0.0.14718** 
 
-### How to install CLEO Redux in The Definition Edition?
+### Как установить CLEO Redux в The Definitive Edition?
 
-- Download and install [Ultimate ASI Loader x64](https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/x64-latest/version.zip) by [ThirteenAG](https://github.com/ThirteenAG) (place `version.dll` to the `Gameface\Binaries\Win64` directory)
-- Copy `cleo_redux64.asi` to the same directory.
+- Загрузите и установите [Ultimate ASI Loader x64](https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/x64-latest/version.zip) от [ThirteenAG](https://github.com/ThirteenAG) (поместите `version.dll` в каталог `Gameface\Binaries\Win64`).
 
-- Run the game once and you should get a new CLEO directory created in the same directory. If that did not happen, check below.
+- Скопируйте `cleo_redux64.asi` в тот же каталог.
 
-### What if I can't find the CLEO directory?
+- Запустите игру один раз, и вы должны создать новый каталог CLEO в том же каталоге. Если этого не произошло, проверьте ниже.
+
+### Что делать, если я не могу найти каталог CLEO?
 
 For many people running their game with CLEO Redux installed results in the immediate crash. It happens if there is no write permissions in the current directory (`Win64`). To remediate this issue CLEO fallbacks to using alternate path at `C:\Users\<your_username>\AppData\Roaming\CLEO Redux`. `cleo_redux.log` and the `CLEO` directory can be found there. See also the [troubleshooting guide](TROUBLESHOOTING.md).
 
