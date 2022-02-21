@@ -69,15 +69,15 @@ FxtStore.delete('MY_KEY')
 Text.PrintHelp('MY_KEY') // Это отображает "Текст из файла FXT" снова.
 ```
 
-A private FXT storage is not supported in San Andreas: The Definitive Edition. Each script there modifies the global FXT storage. This behavior may change in the future.
+Частное хранилище FXT не поддерживается в San Andreas: The Definitive Edition. Каждый скрипт изменяет глобальное хранилище FXT. Это поведение может измениться в будущем.
 
-Custom text can be constructed dynamically, e.g.:
+Пользовательский текст может создаваться динамически, например:
 
 ```js
 while(true) {
     wait(0);
     FxtStore.insert('TIME', 'Timestamp: ' + Date.now());
-    Text.PrintHelp('TIME') // this displays "Timestamp: " and the updated timestamp value
+    Text.PrintHelp('TIME') // Отобразится "Timestamp: " и обновленное значение timestamp.
 }
 ```
 
