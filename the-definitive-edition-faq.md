@@ -92,12 +92,12 @@
 
 ### Как компилировать CLEO-скрипты с помощью Sanny Builder?
 
-Use SA Mobile mode to compile CLEO scripts for San Andreas: The Definitive Edition. Note that CLEO Redux does not support CS scripts in GTA III: DE and VC: DE. JS scripts are supported in all games.
+Используйте режим SA Mobile для компиляции CLEO-скриптов для San Andreas: The Definitive Edition. Обратите внимание, что CLEO Redux не поддерживает CS-скрипты в GTA III: DE и VC: DE. JS-скрипты поддерживаются во всех играх.
 
 ### Я не могу найти здесь ответ на свой вопрос, куда мне обратиться?
 
-- Check the main [readme file](README.md).
-- Check the [troubleshooting guide](TROUBLESHOOTING.md).
-- Check the [GitHub tickets](https://github.com/cleolibrary/CLEO-Redux/issues).
-- Check the [Feature support page](https://github.com/cleolibrary/CLEO-Redux/wiki/Feature-Support-Matrix).
-- Ask a question in [our Discord](https://discord.gg/d5dZSfgBZr).
+- Проверьте основной [файл readme](README.md).
+- Ознакомьтесь с [руководством по устранению неполадок](TROUBLESHOOTING.md).
+- Проверьте [вопросы GitHub](https://github.com/cleolibrary/CLEO-Redux/issues).
+- Проверьте [страницу поддержки функций](https://github.com/cleolibrary/CLEO-Redux/wiki/Feature-Support-Matrix).
+- Задать вопрос в [нашем Discord](https://discord.gg/d5dZSfgBZr).
