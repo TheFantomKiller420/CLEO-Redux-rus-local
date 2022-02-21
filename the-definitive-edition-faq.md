@@ -8,9 +8,9 @@
 - [Могу ли я использовать оригинальные опкоды?](#могу-ли-я-использовать-оригинальные-опкоды)
 - [Как узнать, какие команды можно использовать в JavaScript?](#как-узнать-какие-команды-можно-использовать-в-javascript)
 - [Могу ли я использовать опкоды CLEO?](#могу-ли-я-использовать-опкоды-cleo)
-- [Can I work with the game memory or call the game functions?](#can-i-work-with-the-game-memory-or-call-the-game-functions)
-- [How do I compile CLEO scripts with Sanny Builder?](#how-do-i-compile-cleo-scripts-with-sanny-builder)
-- [I can't find an answer to my question here, where do I go?](#i-cant-find-an-answer-to-my-question-here-where-do-i-go)
+- [Можно ли работать с памятью игры или вызывать функции игры?](#можно-ли-работать-с-памятью-игры-или-вызывать-функции-игры)
+- [Как компилировать CLEO-скрипты с помощью Sanny Builder?](#как-компилировать-cleo-скрипты-с-помощью-sanny-builder)
+- [Я не могу найти здесь ответ на свой вопрос, куда мне обратиться?](#я-не-могу-найти-здесь-ответ-на-свой-вопрос-куда-мне-обратиться)
 
 ### Какие версии поддерживаются?
 
@@ -86,18 +86,18 @@
 {$O 0C09=-1,call_function_return %1d% ib %2d% num_params %3d%}
 ```
 
-### Can I work with the game memory or call the game functions?
+### Можно ли работать с памятью игры или вызывать функции игры?
 
-Yes, check the [Memory guide](using-memory-64.md)
+Да, проверьте [Руководство по использованию памяти](using-memory-64.md).
 
-### How do I compile CLEO scripts with Sanny Builder?
+### Как компилировать CLEO-скрипты с помощью Sanny Builder?
 
 Use SA Mobile mode to compile CLEO scripts for San Andreas: The Definitive Edition. Note that CLEO Redux does not support CS scripts in GTA III: DE and VC: DE. JS scripts are supported in all games.
 
-### I can't find an answer to my question here, where do I go?
+### Я не могу найти здесь ответ на свой вопрос, куда мне обратиться?
 
-- Check the main [readme file](README.md)
+- Check the main [readme file](README.md).
 - Check the [troubleshooting guide](TROUBLESHOOTING.md).
-- Check the [GitHub tickets](https://github.com/cleolibrary/CLEO-Redux/issues)
-- Check the [Feature support page](https://github.com/cleolibrary/CLEO-Redux/wiki/Feature-Support-Matrix)
-- Ask a question in [our Discord](https://discord.gg/d5dZSfgBZr)
+- Check the [GitHub tickets](https://github.com/cleolibrary/CLEO-Redux/issues).
+- Check the [Feature support page](https://github.com/cleolibrary/CLEO-Redux/wiki/Feature-Support-Matrix).
+- Ask a question in [our Discord](https://discord.gg/d5dZSfgBZr).
