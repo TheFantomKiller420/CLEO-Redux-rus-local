@@ -5,7 +5,7 @@
 - [Что делать, если я не могу найти каталог CLEO?](#что-делать-если-я-не-могу-найти-каталог-cleo)
 - [Как удалить CLEO Redux?](#как-удалить-cleo-redux)
 - [Есть ли отличия от поддержки классических игр?](#есть-ли-отличия-от-поддержки-классических-игр)
-- [Can I use original opcodes?](#can-i-use-original-opcodes)
+- [Могу ли я использовать оригинальные опкоды?](#могу-ли-я-использовать-оригинальные-опкоды)
 - [How do I know what commands can I use in JavaScript?](#how-do-i-know-what-commands-can-i-use-in-javascript)
 - [Can I use CLEO opcodes?](#can-i-use-cleo-opcodes)
 - [Can I work with the game memory or call the game functions?](#can-i-work-with-the-game-memory-or-call-the-game-functions)
@@ -40,9 +40,9 @@
 
 Есть. CLEO не отображает версию в меню игры. Также CLEO может запускать только JS-скрипты в GTA III и GTA VC. В San Andreas поддерживаются как скрипты CS, так и JS.
 
-### Can I use original opcodes?
+### Могу ли я использовать оригинальные опкоды?
 
-Yes, you can. Refer to the Sanny Builder library https://library.sannybuilder.com/#/sa_unreal. Take a note that some opcodes have been changed from the classic games, so don't expect everything to work like it was in classic. If you run into an issue, find help in [our Discord](https://discord.gg/d5dZSfgBZr).
+Да, ты можешь. Обратитесь к Sanny Builder Library: https://library.sannybuilder.com/#/sa_unreal. Обратите внимание, что некоторые коды операций были изменены по сравнению с классическими играми, поэтому не ожидайте, что все будет работать так же, как в классических играх. Если вы столкнулись с проблемой, найдите помощь в [нашем Discord] (https://discord.gg/d5dZSfgBZr).
 
 ### How do I know what commands can I use in JavaScript?
 
