@@ -6,7 +6,7 @@
 - [Как удалить CLEO Redux?](#как-удалить-cleo-redux)
 - [Есть ли отличия от поддержки классических игр?](#есть-ли-отличия-от-поддержки-классических-игр)
 - [Могу ли я использовать оригинальные опкоды?](#могу-ли-я-использовать-оригинальные-опкоды)
-- [How do I know what commands can I use in JavaScript?](#how-do-i-know-what-commands-can-i-use-in-javascript)
+- [Как узнать, какие команды можно использовать в JavaScript?](#как-узнать-какие-команды-можно-использовать-в-javascript)
 - [Can I use CLEO opcodes?](#can-i-use-cleo-opcodes)
 - [Can I work with the game memory or call the game functions?](#can-i-work-with-the-game-memory-or-call-the-game-functions)
 - [How do I compile CLEO scripts with Sanny Builder?](#how-do-i-compile-cleo-scripts-with-sanny-builder)
@@ -44,17 +44,17 @@
 
 Да, ты можешь. Обратитесь к Sanny Builder Library: https://library.sannybuilder.com/#/sa_unreal. Обратите внимание, что некоторые коды операций были изменены по сравнению с классическими играми, поэтому не ожидайте, что все будет работать так же, как в классических играх. Если вы столкнулись с проблемой, найдите помощь в [нашем Discord](https://discord.gg/d5dZSfgBZr).
 
-### How do I know what commands can I use in JavaScript?
+### Как узнать, какие команды можно использовать в JavaScript?
 
-After each game run, CLEO generates a d.ts file in the CLEO\.config directory. It's called gta3.d.ts, vc.d.ts or sa.d.ts depending on the game. This file lists all supported functions and methods that you can use in JavaScript code. 
+После каждого запуска игры CLEO создает файл d.ts в каталоге CLEO\.config. Он называется gta3.d.ts, vc.d.ts или sa.d.ts в зависимости от игры. В этом файле перечислены все поддерживаемые функции и методы, которые вы можете использовать в коде JavaScript.
 
-To enable autocomplete in VS Code include the following line in your JS script:
+Чтобы включить автозаполнение в VS Code, включите в свой JS-скрипт следующую строку:
 
 ```js
 /// <reference path=".config/sa.d.ts" />
 ```
 
-Update the file name accordingly depending on which game your script is for.
+Обновите имя файла соответственно в зависимости от того, для какой игры предназначен ваш скрипт.
 
 ### Can I use CLEO opcodes?
 
