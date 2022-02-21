@@ -1,7 +1,7 @@
 Здесь вы можете найти ответы на часто задаваемые вопросы о поддержке ремастера The Trilogy.
 
 - [Какие версии поддерживаются?](#какие-версии-поддерживаются)
-- [Как установить CLEO Redux в The Definitive Edition?](#как-установить-cleo-redux-в-the-definition-edition)
+- [Как установить CLEO Redux в The Definitive Edition?](#как-установить-cleo-redux-в-the-definitive-edition)
 - [Что делать, если я не могу найти каталог CLEO?](#что-делать-если-я-не-могу-найти-каталог-cleo)
 - [How to uninstall CLEO Redux?](#how-to-uninstall-cleo-redux)
 - [Is there any difference from support of the classic games?](#is-there-any-difference-from-support-of-the-classic-games)
