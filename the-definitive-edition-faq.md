@@ -96,7 +96,7 @@
 
 ### Я не могу найти здесь ответ на свой вопрос, куда мне обратиться?
 
-- Проверьте основной [файл readme](README.md).
+- Проверьте основной [файл readme](readme.md).
 - Ознакомьтесь с [руководством по устранению неполадок](TROUBLESHOOTING.md).
 - Проверьте [вопросы GitHub](https://github.com/cleolibrary/CLEO-Redux/issues).
 - Проверьте [страницу поддержки функций](https://github.com/cleolibrary/CLEO-Redux/wiki/Feature-Support-Matrix).
