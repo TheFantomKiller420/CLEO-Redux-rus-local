@@ -8,7 +8,7 @@ while (true) {
   wait(0);
 
   if (player.isPlaying() && Pad.IsKeyPressed(VK_R)) {
-    // Wait for button release (ON)
+    // Дождаемся отпускания кнопки (ON)
     while (Pad.IsKeyPressed(VK_R)) {
       wait(0);
     }
@@ -16,13 +16,13 @@ while (true) {
     setGameSpeed(1.0);
     playSound(13);
 
-    // Decrease the game speed
+    // Уменьшаем скорость игры.
     while (game_speed > 0.26) {
       wait(0);
       setGameSpeed(game_speed * 0.9);
     }
 
-    // Maintain the new speed until the button is pressed
+    // Сохраняем новую скорость до тех пор, пока не будет нажата кнопка.
     while (!Pad.IsKeyPressed(VK_R)) {
       wait(0);
       setGameSpeed(0.25);
@@ -30,7 +30,7 @@ while (true) {
 
     playSound(14);
 
-    // Increase the game speed
+    // Увеличиваем скорость игры.
     while (game_speed < 1.0) {
       wait(0);
       setGameSpeed(game_speed * 1.09);
@@ -38,7 +38,7 @@ while (true) {
 
     setGameSpeed(1.0);
 
-    // Wait for button release (OFF)
+    // Дожидаемся отпускания кнопки (OFF)
     while (Pad.IsKeyPressed(VK_R)) {
       wait(0);
     }
