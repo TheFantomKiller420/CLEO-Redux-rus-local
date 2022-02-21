@@ -1,7 +1,7 @@
 /// <reference path=".config/gta3.d.ts" />
 
-// Mine Drop script. Press M while in car to drop a mine. Don't forget to drive away
-// as the mine will be activated in 1.5 seconds!
+// Скрипт сброса мин. Нажмите M, находясь в машине, чтобы сбросить мину. Не забудьте отъехать!
+// Так как мина активируется через 1,5 секунды!
 
 !["gta3", "vc", "gta3_unreal", "vc_unreal"].includes(GAME) &&
   exit("only for GTA III or Vice City");

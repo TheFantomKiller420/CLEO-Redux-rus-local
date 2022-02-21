@@ -1,9 +1,9 @@
-// this path below assumes the script file is located in CLEO directory. Adjust accordingly to your setup.
+// Этот путь ниже предполагает, что файл скрипта находится в каталоге CLEO. Отрегулируйте в соответствии с вашими настройками.
 /// <reference path=".config/gta3.d.ts" />
 
 /**
- * this script spawns an Infernus in front of the player
- * when the F5 button is pressed
+ * Этот скрипт создаёт Infernus перед игроком.
+ * При нажатии кнопки F5.
  */
 var VK_F5 = 116;
 var MI_INFERNUS = getInfernusMI();
