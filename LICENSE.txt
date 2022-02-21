@@ -1,21 +1,21 @@
-CLEO Redux Freeware License Agreement
+Лицензионное соглашение о бесплатном программном обеспечении CLEO Redux
 -------------------------------------------------------------------------------
 
-By installing, copying, or otherwise using CLEO Redux, you agree to be bounded by the terms of this License Agreement. If you do not agree to the terms of this License Agreement, do not install or use CLEO Redux. 
+Устанавливая, копируя или иным образом используя CLEO Redux, вы соглашаетесь соблюдать условия настоящего Лицензионного соглашения. Если вы не согласны с условиями настоящего Лицензионного соглашения, не устанавливайте и не используйте CLEO Redux.
 
-1. This software is provided on an "AS IS" basis, without warranty of any kind, either expressed or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. In no event shall any copyright holder/author/developer be liable to you for damages, including any general, special, incidental or consequential damages arising out of the use or inability to use the software including but not limited to loss of data, failure of the software to operate with any other programs or software, even if copyright holder/author/developer has been advised of the possibility of such damages.
+1. Это программное обеспечение предоставляется на условиях «КАК ЕСТЬ», без каких-либо явных или подразумеваемых гарантий, включая, помимо прочего, подразумеваемые гарантии товарного состояния и пригодности для определенной цели. Ни при каких обстоятельствах какой-либо правообладатель/автор/разработчик не несет ответственности перед вами за ущерб, включая любой общий, специальный, случайный или косвенный ущерб, возникающий в результате использования или невозможности использования программного обеспечения, включая, помимо прочего, потерю данных, сбой программное обеспечение для работы с любыми другими программами или программным обеспечением, даже если правообладатель/автор/разработчик был уведомлен о возможности таких убытков.
 
-2. You may not rent, lease, lend or sell CLEO Redux in any way.
+2. Вы не можете сдавать, сдавать в аренду, одалживать или продавать CLEO Redux каким-либо образом.
 
-3. You may distribute CLEO Redux or make it available for distribution over the Internet or any other distributable medium only with this License Agreement included.
+3. Вы можете распространять CLEO Redux или делать его доступным для распространения через Интернет или любой другой распространяемый носитель только с включенным настоящим Лицензионным соглашением.
 
-4. You can not change the terms of this License Agreement.
+4. Вы не можете изменить условия настоящего Лицензионного соглашения.
 
-By installing and/or using CLEO Redux you are automatically agreeing to and show that you have read and understood the terms and conditions contained within this License Agreement. This License Agreement is then effective while you install, use and continue to make use of CLEO Redux. If you do not agree with this license agreement you must not install or use CLEO Redux - this license agreement will then not apply to you. This license agreement is subject to change without notice.
+Устанавливая и/или используя CLEO Redux, вы автоматически соглашаетесь и показываете, что прочитали и поняли положения и условия, содержащиеся в настоящем Лицензионном соглашении. Настоящее Лицензионное соглашение действует, пока вы устанавливаете, используете и продолжаете использовать CLEO Redux. Если вы не согласны с этим лицензионным соглашением, вы не должны устанавливать или использовать CLEO Redux — это лицензионное соглашение не будет применяться к вам. Настоящее лицензионное соглашение может быть изменено без предварительного уведомления.
 
-If you have any questions regarding this License Agreement, please contact opinion@cleo.li
+Если у вас есть какие-либо вопросы относительно настоящего Лицензионного соглашения, пожалуйста, свяжитесь с нами по адресу mind@cleo.li.
 
 -------------------------------------------------------------------------------
 Copyright (c) 2021-2022, Seemann 
-All rights reserved.
+Все права защищены.
 https://re.cleo.li
