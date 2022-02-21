@@ -1,4 +1,4 @@
-## Using FXT
+## Использование FXT
 
 ### Static FXT files
 
