@@ -1,6 +1,6 @@
-Here you can find answers to the frequently asked questions about support for The Trilogy remaster.
+Здесь вы можете найти ответы на часто задаваемые вопросы о поддержке ремастера The Trilogy.
 
-- [What versions are supported?](#what-versions-are-supported)
+- [Какие версии поддерживаются?](#какие-версии-поддерживаются)
 - [How to install CLEO Redux in The Definition Edition?](#how-to-install-cleo-redux-in-the-definition-edition)
 - [What if I can't find the CLEO directory?](#what-if-i-cant-find-the-cleo-directory)
 - [How to uninstall CLEO Redux?](#how-to-uninstall-cleo-redux)
@@ -12,7 +12,7 @@ Here you can find answers to the frequently asked questions about support for Th
 - [How do I compile CLEO scripts with Sanny Builder?](#how-do-i-compile-cleo-scripts-with-sanny-builder)
 - [I can't find an answer to my question here, where do I go?](#i-cant-find-an-answer-to-my-question-here-where-do-i-go)
 
-### What versions are supported?
+### Какие версии поддерживаются?
 
 - GTA III: The Definitive Edition **1.0.0.14718** 
 - GTA Vice City: The Definitive Edition **1.0.0.14718** 
@@ -20,7 +20,7 @@ Here you can find answers to the frequently asked questions about support for Th
 
 ### How to install CLEO Redux in The Definition Edition?
 
-- Download and install [Ultimate ASI Loader x64](https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/x64-latest/version.zip) by ThirteenAG (place `version.dll` to the `Gameface\Binaries\Win64` directory)
+- Download and install [Ultimate ASI Loader x64](https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/x64-latest/version.zip) by [ThirteenAG](https://github.com/ThirteenAG) (place `version.dll` to the `Gameface\Binaries\Win64` directory)
 - Copy `cleo_redux64.asi` to the same directory.
 
 - Run the game once and you should get a new CLEO directory created in the same directory. If that did not happen, check below.
