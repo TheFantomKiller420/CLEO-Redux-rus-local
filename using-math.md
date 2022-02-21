@@ -1,6 +1,6 @@
-## Using Math Object
+## Использование математических объектов
 
-JavaScript has a built-in `Math` object that provides common mathematical operations, such as `abs`, `sin`, `cos`, `random`, `pow`, `sqr`, etc. CLEO Redux extends this object to include extra operations supported by the game. The interface of `Math` looks as follows:
+В JavaScript есть встроенный объект `Math`, который обеспечивает общие математические операции, такие как `abs`, `sin`, `cos`, `random`, `pow`, `sqr` и т. д. CLEO Redux расширяет этот объект до включать дополнительные операции, поддерживаемые игрой. Интерфейс `Math` выглядит следующим образом:
 
 ```ts
 interface Math {
@@ -32,25 +32,25 @@ interface Math {
     sqrt(x: number): number;
     tan(x: number): number;
 
-    // GTA III, GTA Vice City, GTA SA commands
+    // GTA III, GTA Vice City, GTA SA команды
     ConvertMetersToFeet(meters: int): int;
     RandomFloatInRange(min: float, max: float): float;
     RandomIntInRange(min: int, max: int): int;
 
-    // GTA Vice City, GTA SA commands
+    // GTA Vice City, GTA SA команды
     GetDistanceBetweenCoords2D(fromX: float, fromY: float, toX: float, toZ: float): float;
     GetDistanceBetweenCoords3D(fromX: float, fromY: float, fromZ: float, toX: float, toY: float, toZ: float): float;
 
-    // GTA SA commands
+    // GTA SA команды
     GetAngleBetween2DVectors(xVector1: float, yVector1: float, xVector2: float, yVector2: float): float;
     GetHeadingFromVector2D(_p1: float, _p2: float): float;
     LimitAngle(value: float): float;
 }
 ```
 
-The first group includes the native constants and methods provided by the JavaScript runtime. They start with a lowercase letter, e.g. `Math.abs`. You can find the detailed documentation for these methods [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math).
+Первая группа включает собственные константы и методы, предоставляемые средой выполнения JavaScript. Они начинаются со строчной буквы, например. `Math.abs`. Вы можете найти подробную документацию по этим методам [здесь](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math).
 
-Then the game-specific commands go. Following the naming convention, each method that is bound to a script opcode starts with a capital letter, e.g. `Math.RandomIntInRange` (opcode 0209). You can find the documentation in [Sanny Builder Library](https://library.sannybuilder.com/).
+Затем идут специфичные для игры команды. Согласно соглашению об именах, каждый метод, привязанный к коду операции скрипта, начинается с заглавной буквы, например `Math.RandomIntInRange` (код операции 0209). Вы можете найти документацию в [Sanny Builder Library](https://library.sannybuilder.com/).
 
 
 ```js
