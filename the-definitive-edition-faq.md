@@ -3,7 +3,7 @@
 - [Какие версии поддерживаются?](#какие-версии-поддерживаются)
 - [Как установить CLEO Redux в The Definitive Edition?](#как-установить-cleo-redux-в-the-definitive-edition)
 - [Что делать, если я не могу найти каталог CLEO?](#что-делать-если-я-не-могу-найти-каталог-cleo)
-- [How to uninstall CLEO Redux?](#how-to-uninstall-cleo-redux)
+- [Как удалить CLEO Redux?](#как-удалить-cleo-redux)
 - [Is there any difference from support of the classic games?](#is-there-any-difference-from-support-of-the-classic-games)
 - [Can I use original opcodes?](#can-i-use-original-opcodes)
 - [How do I know what commands can I use in JavaScript?](#how-do-i-know-what-commands-can-i-use-in-javascript)
@@ -28,13 +28,13 @@
 
 ### Что делать, если я не могу найти каталог CLEO?
 
-For many people running their game with CLEO Redux installed results in the immediate crash. It happens if there is no write permissions in the current directory (`Win64`). To remediate this issue CLEO fallbacks to using alternate path at `C:\Users\<your_username>\AppData\Roaming\CLEO Redux`. `cleo_redux.log` and the `CLEO` directory can be found there. See also the [troubleshooting guide](TROUBLESHOOTING.md).
+У многих людей запуск игры с установленным CLEO Redux приводит к немедленному вылету. Это происходит, если в текущем каталоге (`Win64`) нет прав на запись. Чтобы исправить эту проблему, CLEO использует альтернативный путь в `C:\Users\<Ваше_имя_пользователя>\AppData\Roaming\CLEO Redux`. Там можно найти `cleo_redux.log` и каталог `CLEO`. См. также [руководство по устранению неполадок](TROUBLESHOOTING.md).
 
-### How to uninstall CLEO Redux?
+### Как удалить CLEO Redux?
 
-- Delete `cleo_redux64.asi`.
-- Delete the `CLEO` folder (optional).
-- Delete the `cleo_redux.log` (optional)
+- Удалите `cleo_redux64.asi`.
+- Удалите папку `CLEO` (необязательно).
+- Удалите `cleo_redux.log` (необязательно)
 
 ### Is there any difference from support of the classic games?
 
