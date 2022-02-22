@@ -1,8 +1,8 @@
 ## CLEO Redux SDK
 
-SDK provides a way to create new script commands for any game that CLEO Redux supports. It is agnostic to the game title and the underlying runtime (CS or JS). At this moment CLEO provides SDK for the C++ and Rust languages.
+SDK позволяет создавать новые скриптовые команды для любой игры, которую поддерживает CLEO Redux. Он не зависит от названия игры и базовой среды выполнения (CS или JS). На данный момент CLEO предоставляет SDK для языков C++ и Rust.
 
-### Platforms Support
+### Поддержка платформ
 
 CLEO Redux provides SDK for both 32-bit and 64-bit games. There is one notable change between the two: on the 32-bit platform the SDK functions `GetIntParam` and `SetIntParam` operate on signed 32-bit numbers, whereas on the 64-bit platform they operate on signed 64-bit numbers (declared as the type `isize`).
 
