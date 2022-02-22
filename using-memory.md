@@ -1,8 +1,8 @@
-Note: This guide is for the classic era games. For the information on using the Memory class in the definitive editions [click here](./using-memory-64.md).
+Примечание. Это руководство предназначено для игр классической эпохи. Для получения информации об использовании класса Memory в окончательных версиях [нажмите здесь](./using-memory-64.md).
 
-## Using Memory Object
+## Использование объекта памяти
 
-An intrinsic object `Memory` provides methods for accessing and manipulating the data or code in the current process. It has the following interface:
+Внутренний объект `Memory` предоставляет методы для доступа и управления данными или кодом в текущем процессе. Он имеет следующий интерфейс:
 
 ```ts
 interface Memory {
@@ -69,15 +69,15 @@ interface Memory {
 }
 ```
 
-### Reading and Writing Values
+### Чтение и запись значений
 
-Group of memory access methods (`ReadXXX`/`WriteXXX`) can be used for reading or modifying values stored in the memory. Each method is designed for a particular data type. To change a floating-point value (which occupies 4 bytes in the original game) use `Memory.WriteFloat`, e.g.:
+Группа методов доступа к памяти (`ReadXXX`/`WriteXXX`) может использоваться для чтения или изменения значений, хранящихся в памяти. Каждый метод предназначен для определенного типа данных. Чтобы изменить значение с плавающей запятой (которое в исходной игре занимает 4 байта), используйте `Memory.WriteFloat`, например:
 
 ```js
     Memory.WriteFloat(address, 1.0, false)
 ```
 
-where `address` is a variable storing the memory location, `1.0` is the value to write and `false` means it's not necessary to change the memory protection with `VirtualProtect` (the address is already writable). 
+Где `address` — это переменная, хранящая адрес памяти, `1.0` — это значение для записи, а `false` означает, что нет необходимости изменять защиту памяти с помощью  `VirtualProtect` (адрес уже доступен для записи). 
 
 Similarly, to read a value from the memory, use one of the `ReadXXX` methods, depending on what data type the memory address contains. For example, to read a 8-bit signed integer (also known as a `char` or `uint8`) use `Memory.ReadI8`, e.g.:
 
