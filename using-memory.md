@@ -139,43 +139,43 @@ interface Memory {
 ```js
     Memory.CallFunction(0x1234567, 2, 0, 1000, 2000)
 ```
-where `0x1234567` is the address of the function, `2` is the number of arguments, `0` is the `pop` parameter (see below),  `1000` and `2000` are the two arguments passed into the function.
+Где `0x1234567` — адрес функции, `2` — количество аргументов, `0` — параметр `pop` (см. ниже), `1000` и `2000` — два аргумента, переданных в функцию.
 
-Note that legacy SCM implementation of the call commands require the arguments of the invoked function to be listed in reverse order. That's it, you would see the same call in SCM as:
+Обратите внимание, что устаревшая реализация команд вызова SCM требует, чтобы аргументы вызываемой функции были перечислены в обратном порядке. Вот и все, вы увидите тот же вызов в SCM, что и:
 
 ```
 0AA5: call 0x1234567 num_params 2 pop 0 2000 1000
 ```
-where `2000` is the second argument passed to the function located at 0x1234567 and `1000` is the first one.
+Где `2000` — второй аргумент, передаваемый функции, расположенной по адресу 0x1234567, а `1000` — первый.
 
 
-The third parameter (`pop`) in `Memory.CallFunction` defines the calling convention. When it is set to `0`, the function is called using the [stdcall](https://en.wikipedia.org/wiki/X86_calling_conventions#stdcall) convention. When it is set to the same value as `numParam`, the function is called using the [cdecl](https://en.wikipedia.org/wiki/X86_calling_conventions#cdecl) convention. Any other value breaks the code.
+Третий параметр (`pop`) в `Memory.CallFunction` определяет соглашение о вызовах. Если установлено значение `0`, функция вызывается с использованием соглашения [stdcall](https://en.wikipedia.org/wiki/X86_calling_conventions#stdcall). Когда для него установлено то же значение, что и для `numParam`, функция вызывается с использованием соглашения [cdecl](https://en.wikipedia.org/wiki/X86_calling_conventions#cdecl). Любое другое значение нарушает код.
 
-`Memory.CallFunctionReturn` has the same interface but additionally it writes the result of the function to a variable.
+`Memory.CallFunctionReturn` имеет тот же интерфейс, но дополнительно записывает результат функции в переменную.
 
-`Memory.CallMethod` invokes a method of an object:
+`Memory.CallMethod` вызывает метод объекта:
 
 ```js
     Memory.CallMethod(0x2345678, 0x7001234, 2, 0, 1000, 2000)
 ```
 
-The second parameter (`0x7001234`) is the object address. The `pop` parameter is always `0` (the method uses the [thiscall](https://en.wikipedia.org/wiki/X86_calling_conventions#thiscall) convention).
+Второй параметр (`0x7001234`) — это адрес объекта. Параметр `pop` всегда равен `0` (метод использует соглашение [thiscall](https://en.wikipedia.org/wiki/X86_calling_conventions#thiscall)).
 
-To call the method and get the result out of it, use `Memory.CallMethodReturn`.
+Чтобы вызвать метод и получить от него результат, используйте `Memory.CallMethodReturn`.
 
-Note that all arguments are read as 32-bit signed integers. If you need to provide an argument of the float type, use `Memory.FromFloat`, e.g.
+Обратите внимание, что все аргументы читаются как 32-битные целые числа со знаком. Если вам нужно предоставить аргумент типа float, используйте `Memory.FromFloat`, например:
 
 ```js
     Memory.CallFunction(0x1234567, 1, 1, Memory.FromFloat(123.456))
 ```
 
-CLEO Redux supports calling foreign functions with up to 16 parameters.
+CLEO Redux поддерживает вызов сторонних функций с параметрами до 16.
 
-**Note that usage of any of the call methods requires the `mem` [permission](README.md#Permissions)**.
+**Обратите внимание, что для использования любого из методов вызова требуется `mem` [разрешение](readme.md#разрешения)**.
 
 #### Convenience methods with Fn object
 
-`Memory.Fn` provides a lot of convenient methods for calling different types of foreign functions.
+`Memory.Fn` предоставляет множество удобных методов для вызова различных типов внешних функций.
 
 ```ts
 Fn: {
@@ -208,48 +208,48 @@ Fn: {
     }
 ```
 
-These methods is designed to cover all possible function signatures. For example, this code
+Эти методы предназначены для охвата всех возможных сигнатур функций. Например, этот код:
 
 ```js
     Memory.CallMethod(0x2345678, 0x7001234, 2, 0, 1000, 2000)
 ```
 
-can also be written as
+Также можно записать как:
 
 ```js
     Memory.Fn.Thiscall(0x2345678, 0x7001234)(1000, 2000)
 ```
 
-Note a few key differences here. First of all, `Memory.Fn` methods don't invoke a foreign function directly. Instead, they return a new JavaScript function that can be stored in a variable and reused to call the associated foreign function many times with different arguments:
+Обратите внимание на несколько ключевых отличий. Прежде всего, методы `Memory.Fn` не вызывают внешнюю функцию напрямую. Вместо этого они возвращают новую функцию JavaScript, которую можно сохранить в переменной и повторно использовать для многократного вызова связанной внешней функции с разными аргументами:
 
 ```js
     var myMethod = Memory.Fn.Thiscall(0x2345678, 0x7001234);
-    myMethod(1000, 2000); // calls method 0x2345678 with arguments 1000 and 2000
-    myMethod(3000, 5000); // calls method 0x2345678 with arguments 3000 and 5000
+    myMethod(1000, 2000); // вызывает метод 0x2345678 с аргументами 1000 и 2000
+    myMethod(3000, 5000); // вызывает метод 0x2345678 с аргументами 3000 и 5000
 ```
 
-The second difference is that there are no `numParams` and `pop` parameters. Each `Fn` method figures them out automatically.
+Второе отличие состоит в том, что отсутствуют параметры `numParams` и `pop`. Каждый метод `Fn` вычисляет их автоматически.
 
-By default a returned result is considered a 32-bit signed integer value. If the function returns another type (a floating-point value, or a signed integer), use one of the methods matching the function signature, e.g.:
+По умолчанию возвращаемый результат считается 32-битным целым числом со знаком. Если функция возвращает другой тип (значение с плавающей запятой или целое число со знаком), используйте один из методов, соответствующих сигнатуре функции, например:
 
 ```js
     var flag = Memory.Fn.CdeclU8(0x1234567)()
 ```
 
-This code invokes a `cdecl` function at `0x1234567` with no arguments and stores the result as a 8-bit unsigned integer value. 
+Этот код вызывает функцию `cdecl` по адресу `0x1234567` без аргументов и сохраняет результат в виде 8-битного целого числа без знака. 
 
 
-### Finding Memory Addresses in re3 and reVC
+### Поиск адресов памяти в re3 и reVC
 
-Since `re3` and `reVC` use address space layout randomization (ASLR) feature, it can be difficult to locate needed addresses. CLEO Redux provides a helper function `Memory.Translate` that accepts a name of the function or variable and returns its current address. If the requested symbol is not found, the result is 0.
+Поскольку `re3` и `reVC` используют функцию рандомизации адресного пространства (ASLR), может быть трудно найти нужные адреса. CLEO Redux предоставляет вспомогательную функцию `Memory.Translate` которая принимает имя функции или переменной и возвращает ее текущий адрес. Если запрошенный символ не найден, результат равен 0.
 
 ```js
     var addr = Memory.Translate("CTheScripts::MainScriptSize");
 
-    // check if address is not zero
+    // проверить, не равен ли адрес нулю
     if (addr) {
         showTextBox("MainScriptSize = " + Memory.ReadI32(addr, 0))
     }
 ```
 
-At the moment `Memory.Translate` should only be used in `re3` and `reVC`. In other games you will be getting `0` as a result most of the time.
+На данный момент `Memory.Translate` следует использовать только в `re3` и `reVC`. В других играх в большинстве случаев вы будете получать `0`.
