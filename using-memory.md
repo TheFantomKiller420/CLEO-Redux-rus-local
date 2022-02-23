@@ -79,13 +79,13 @@ interface Memory {
 
 Где `address` — это переменная, хранящая адрес памяти, `1.0` — это значение для записи, а `false` означает, что нет необходимости изменять защиту памяти с помощью  `VirtualProtect` (адрес уже доступен для записи). 
 
-Similarly, to read a value from the memory, use one of the `ReadXXX` methods, depending on what data type the memory address contains. For example, to read a 8-bit signed integer (also known as a `char` or `uint8`) use `Memory.ReadI8`, e.g.:
+Точно так же, чтобы прочитать значение из памяти, используйте один из методов `ReadXXX`, в зависимости от того, какой тип данных содержит адрес памяти. Например, чтобы прочитать 8-битное целое число со знаком (также известное как `char` или `uint8`), используйте `Memory.ReadI8`, например:
 
 ```js
     var x = Memory.ReadI8(address, true)
 ```
 
-variable `x` now holds a 8-bit integer value in the range (0..255). For the sake of showing possible options, this example uses `true` as the last argument, which means the default protection attribute for this address will be changed to `PAGE_EXECUTE_READWRITE` before the read.
+переменная `x` теперь содержит 8-битное целое значение в диапазоне (0..255). Чтобы показать возможные варианты, в этом примере в качестве последнего аргумента используется `true`, что означает, что атрибут защиты по умолчанию для этого адреса будет изменен на `PAGE_EXECUTE_READWRITE` перед чтением.
 
 ```js
     var gravity = Memory.ReadFloat(gravityAddress, false);
@@ -93,24 +93,24 @@ variable `x` now holds a 8-bit integer value in the range (0..255). For the sake
     Memory.WriteFloat(gravityAddress, gravity, false);
 ```
 
-Finally, last two methods `Read` and `Write` is what other methods use under the hood. They have direct binding to opcodes [0A8D READ_MEMORY](https://library.sannybuilder.com/#/gta3/CLEO/0A8D) and [0A8C WRITE_MEMORY](https://library.sannybuilder.com/#/gta3/CLEO/0A8C) and produce the same result. 
+Наконец, последние два метода `Read` и `Write` — это то, что другие методы используют под капотом. Они имеют прямую привязку к опкодам [0A8D READ_MEMORY](https://library.sannybuilder.com/#/gta3/CLEO/0A8D) и [0A8C WRITE_MEMORY](https://library.sannybuilder.com/#/gta3/CLEO/0A8C) и дают тот же результат. 
 
-The `size` parameter in the `Read` method can only be `1`, `2` or `4`. CLEO treats the `value` as a signed integer stored in the little-endian format. 
+Параметр `size` в методе `Read` может быть только `1`, `2` или `4`. CLEO обрабатывает `value` как целое число со знаком, хранящееся в формате с прямым порядком байтов.
 
-In the `Write` method any `size` larger than `0` is allowed. Sizes `3` and `5` onwards can only be used together with a single byte `value`.  CLEO uses them to fill a continious block of memory starting at the `address` with the given `value` (think of it as `memset` in C++).
+В методе `Write` допускается любой `size` больше `0`. Размеры `3` и `5` и далее могут использоваться только вместе с одним байтом `value`. CLEO использует их для заполнения непрерывного блока памяти, начиная с `address`, с заданным `value` (подумайте об этом как о `memset` в C++).
 
 ```js
-    Memory.Write(addr, 0x90, 10, true) // "noping" 10 bytes of code starting from addr
+    Memory.Write(addr, 0x90, 10, true) // "noping" 10 байт кода, начиная с адреса
 ```
 
-**Note that usage of any of the read/write methods requires the `mem` [permission](README.md#Permissions)**.
+**Обратите внимание, что для использования любого из методов чтения/записи требуется `mem` [разрешение] (readme.md#разрешения)**.
 
 
-### Casting methods
+### Casting methods (ХЗ как адекватно перевести)
 
-By default `Read` and `Write` methods treat data as signed integer values. It can be inconvinient if the memory holds a floating-point value in IEEE 754 format or a large 32-bit signed integer (e.g. a pointer). In this case use casting methods `ToXXX`/`FromXXX`. They act similarly to [reinterpret_cast](https://docs.microsoft.com/en-us/cpp/cpp/reinterpret-cast-operator?view=msvc-160) operator in C++.
+По умолчанию методы `Read` и `Write` обрабатывают данные как целочисленные значения со знаком. Это может быть неудобно, если память содержит значение с плавающей запятой в формате IEEE 754 или большое 32-битное целое число со знаком (например, указатель). В этом случае используйте методы приведения `ToXXX`/`FromXXX`. Они действуют аналогично оператору [reinterpret_cast](https://docs.microsoft.com/en-us/cpp/cpp/reinterpret-cast-operator?view=msvc-160) в C++.
 
-To get a quick idea what to expect from those methods see the following examples:
+Чтобы получить представление о том, чего ожидать от этих методов, см. следующие примеры:
 
 ```js
     Memory.FromFloat(1.0) => 1065353216
@@ -123,7 +123,7 @@ To get a quick idea what to expect from those methods see the following examples
     Memory.ToI32(4294967295) => -1
 ```
 
-Alternatively, use appropriate methods to read/write the value as a float (`ReadFloat`/`WriteFloat`) or as an unsigned integer (`ReadUXXX`/`WriteUXXX`).
+В качестве альтернативы используйте соответствующие методы для чтения/записи значения в виде числа с плавающей запятой (`ReadFloat`/`WriteFloat`) или целого числа без знака (`ReadUXXX`/`WriteUXXX`).
 
 
 ### Calling Foreign Functions
