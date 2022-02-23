@@ -1,8 +1,8 @@
-Note: This guide is for the remastered games running as 64-bit applications. For the information on using the Memory class in classic era games [click here](./using-memory.md).
+Примечание. Это руководство предназначено для обновленных игр, работающих как 64-разрядные приложения. Для получения информации об использовании класса Memory в играх классической эпохи [нажмите здесь](./using-memory.md).
 
-## Using Memory Object
+## Использование объекта памяти
 
-An intrinsic object `Memory` provides methods for accessing and manipulating the data or code in the current process. It has the following interface:
+Внутренний объект `Memory` предоставляет методы для доступа и управления данными или кодом в текущем процессе. Он имеет следующий интерфейс:
 
 ```ts
 interface Memory {
