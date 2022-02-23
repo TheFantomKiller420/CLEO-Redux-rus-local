@@ -1,4 +1,4 @@
-Примечание. Это руководство предназначено для игр классической эпохи. Для получения информации об использовании класса Memory в окончательных версиях [нажмите здесь](./using-memory-64.md).
+Примечание. Это руководство предназначено для игр классической эпохи. Для получения информации об использовании класса Memory в Definitive Edition [нажмите здесь](./using-memory-64.md).
 
 ## Использование объекта памяти
 
@@ -126,14 +126,14 @@ interface Memory {
 В качестве альтернативы используйте соответствующие методы для чтения/записи значения в виде числа с плавающей запятой (`ReadFloat`/`WriteFloat`) или целого числа без знака (`ReadUXXX`/`WriteUXXX`).
 
 
-### Calling Foreign Functions
+### Вызов внешних функций
 
-`Memory` object allows to invoke a foreign (native) function by its address using one of the following methods:
+Объект `Memory` позволяет вызвать чужую (собственную) функцию по ее адресу одним из следующих способов:
 
-- `Memory.CallFunction` - binds to [0AA5 CALL_FUNCTION](https://library.sannybuilder.com/#/gta3/CLEO/0AA5)
-- `Memory.CallFunctionReturn` - binds to [0AA7 CALL_FUNCTION_RETURN](https://library.sannybuilder.com/#/gta3/CLEO/0AA7)
-- `Memory.CallMethod` - binds to [CALL_METHOD](https://library.sannybuilder.com/#/gta3/CLEO/0AA6)
-- `Memory.CallMethodReturn` - binds to [CALL_METHOD_RETURN](https://library.sannybuilder.com/#/gta3/CLEO/0AA8)
+- `Memory.CallFunction` - привязывается к [0AA5 CALL_FUNCTION](https://library.sannybuilder.com/#/gta3/CLEO/0AA5)
+- `Memory.CallFunctionReturn` - привязывается к [0AA7 CALL_FUNCTION_RETURN](https://library.sannybuilder.com/#/gta3/CLEO/0AA7)
+- `Memory.CallMethod` - привязывается к [CALL_METHOD](https://library.sannybuilder.com/#/gta3/CLEO/0AA6)
+- `Memory.CallMethodReturn` - привязывается к [CALL_METHOD_RETURN](https://library.sannybuilder.com/#/gta3/CLEO/0AA8)
 
 
 ```js
