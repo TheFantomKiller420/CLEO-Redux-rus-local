@@ -353,7 +353,7 @@ var x = Object.create(null); // собственный код JavaScript, соз
 
 Примечание: В `JSON` нет комментариев. 
 
-[Подробнее здесь](#using-json.md). 
+[Подробнее здесь](https://github.com/TheFantomKiller420/CLEO-Redux-rus-local/blob/master/using-json.md). 
 
 #### Свободный интерфейс
 
