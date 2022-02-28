@@ -133,3 +133,12 @@ let s = JSON.stringify(contacts);
 ```js
 let contacts = JSON.parse(s);
 ```
+
+#### Считывание элемента из JSON объекта
+
+Считывание происходит с помощью данной команды:
+
+```js
+contacts.имя // Глеб
+contacts.адрес.дом // Колотушкина
+```
