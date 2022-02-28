@@ -128,3 +128,8 @@ let s = JSON.stringify(contacts);
 
 #### Метод JSON.parse()
 
+Чтобы преобразовать строку обратно в функцию, мы используем встроенную функцию JSON.parse(), чтобы декодировать строку.
+
+```js
+let contacts = JSON.parse(s);
+```
