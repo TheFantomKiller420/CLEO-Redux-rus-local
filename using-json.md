@@ -163,6 +163,7 @@ contacts.address.home // Колотушкина
     "pets": null
   }
 }
+```
 
 К примеру наш файл называется `myInfo.json` и путь до него (из папки CLEO) `/config/myInfo.json`.
 
