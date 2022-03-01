@@ -46,7 +46,7 @@ JSON (JavaScript Object Notation) - это легкий формат для об
   "friends": ["Савелий", "Николай"], 
   "address":{
     "street": "Пушкина", 
-    "home: "Колотушкина"
+    "home": "Колотушкина"
   }, 
   "programmer": true, 
   "pets": null
@@ -157,7 +157,7 @@ contacts.address.home // Колотушкина
     "friends": ["Савелий", "Николай"], 
     "address":{
       "street": "Пушкина", 
-      "home: "Колотушкина"
+      "home": "Колотушкина"
     }, 
     "programmer": true, 
     "pets": null
