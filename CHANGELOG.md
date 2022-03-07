@@ -1,3 +1,9 @@
+### 0.9.2 - Mar 04, 2022 
+  
+- add support for The Definitive Edition Title Update 1.04 (GTA III DE 1.0.0.15284, VC DE 1.0.0.15399, SA DE 1.0.0.15483) 
+- fix an issue with string arguments in Memory call commands in GTA San Andreas (https://github.com/cleolibrary/CLEO-Redux/issues/36) 
+- fix an issue with scripts not working if the path to the game directory has square brackets ​`[`​, ​`]` 
+  
 ### 0.9.1 - Feb 22, 2022
 
 - add [SDK for developing custom commands](using-sdk.md) in C++ and Rust
@@ -65,109 +71,109 @@ let groundZ = CWorldFindGroundZForCoord(x, y);
 
 ### 0.8.6 - Jan 12, 2022
 
-- add [CALL_FUNCTION](https://library.sannybuilder.com/#/sa_unreal/CLEO/0C08) and [CALL_FUNCTION_RETURN](https://library.sannybuilder.com/#/sa_unreal/CLEO/0C09) commands in San Andreas: The Definitive Edition
+- Добавлены команды [CALL_FUNCTION](https://library.sannybuilder.com/#/sa_unreal/CLEO/0C08) и [CALL_FUNCTION_RETURN](https://library.sannybuilder.com/#/sa_unreal/CLEO/0C09) в San Andreas: The Definitive Edition
 - add `Memory.Fn.X64` convenience methods for [calling functions from JavaScript on the x64 platform](using-memory-64.md#calling-foreign-functions)
 - `showTextBox` now works in San Andreas: The Definitive Edition
 - fix an issue with FxtStore object not showing in VS Code autocomplete
 - fix an issue with text draw not working in GTA San Andreas
 - fix an issue in CLEO dev builds causing the game crash on startup while checking for an update
 
-#### BREAKING CHANGE
+#### ГЛАВНОЕ ИЗМЕНЕНИЕ
 
-- minimum required version of `sa_unreal.json` is `0.209`
+- Минимальная требуемая версия `sa_unreal.json` – `0.209`
 
 ### 0.8.5 - Jan 1, 2022
 
-- add support for [static FXT files](using-fxt.md#static-fxt-files) in `CLEO_TEXT` folder
-- add support for [private FXT storage](using-fxt.md#fxtstore) in each JS script
-- fix an issue when [scripts permissions](README.md#permissions) were not validated for CLEO scripts
-- fix an issue when the game may crash on the script reload
-- [custom CLEO opcodes](README.md#compatibility-with-the-trilogy-the-definitive-edition) (`0C00`-`0C07`) can now be used in the main.scm in San Andreas: DE
+- Добавлена поддержка [статических файлов FXT] (using-fxt.md#статические-файлы-fxt) в папке `CLEO_TEXT`
+- Добавить поддержку [частного хранилища FXT] (используя-fxt.md#fxtstore) в каждом сценарии JS
+- Исправлена ​​проблема, когда [права доступа к скриптам](readme.md#разрешения) не проверялись для CLEO-скриптов
+- Исправлена ​​проблема, когда игра могла вылетать при перезагрузке скрипта
+- [Пользовательские опкоды CLEO](readme.md#совместимость-с-the-trilogy-the-definitive-edition) (`0C00`-`0C07`) теперь можно использовать в main.scm в San Andreas: DE
 
 ### 0.8.4 - Dec 17, 2021
 
-- for San Andreas: The Definitive Edition:
+- Для San Andreas: The Definitive Edition:
 
-  - new opcodes `0C06 WRITE_MEMORY` and `0C07 READ_MEMORY`, as well as corresponding JavaScript commands: `Memory.Write` and `Memory.Read`. [Read the guide](using-memory-64.md) for more information
-  - fix an issue with opcodes `0C01`, `0C02`, `0C03`, `0C04` crashing the game
+  - Новые коды операций `0C06 WRITE_MEMORY` и `0C07 READ_MEMORY`, а также соответствующие команды JavaScript: `Memory.Write` и `Memory.Read`.  [Прочитайте руководство](using-memory-64.md) для получения дополнительной информации
+  - Исправлена ​​проблема с кодами операций `0C01`, `0C02`, `0C03`, `0C04`, приводившая к сбою игры
 
-- for all games:
-  - improve stability of JS scripts (https://github.com/cleolibrary/CLEO-Redux/issues/22)
-  - fix an issue when scripts permissions were not validated for CLEO scripts
+- Для всех игр:
+  - Улучшена стабильность JS-скриптов (https://github.com/cleolibrary/CLEO-Redux/issues/22)
+  - Исправлена ​​проблема, когда права доступа не проверялись для CLEO-скриптов
 
-#### BREAKING CHANGES
+#### ОСНОВНЫЕ ИЗМЕНЕНИЯ
 
-CLEO Redux for San Andreas: The Definitive Edition now uses `sa_unreal.json` from https://github.com/sannybuilder/library.
+CLEO Redux для San Andreas: Definitive Edition теперь использует `sa_unreal.json` из https://github.com/sannybuilder/library.
 
-| Game                                | Minumum Required Version |
-| ----------------------------------- | ------------------------ |
-| GTA III, re3                        | `0.200`                  |
-| GTA VC, reVC                        | `0.201`                  |
-| GTA San Andreas (Classic) 1.0       | `0.202`                  |
-| San Andreas: The Definitive Edition | `0.204`                  |
+| Игра                                | Минимальная требуемая версия |
+| ----------------------------------- | ---------------------------- |
+| GTA III, re3                        | `0.200`                      |
+| GTA VC, reVC                        | `0.201`                      |
+| GTA San Andreas (Classic) 1.0       | `0.202`                      |
+| San Andreas: The Definitive Edition | `0.204`                      |
 
 ### 0.8.3 - Dec 8, 2021
 
-- fix a critical bug in CS scripts scheduler causing abnormal behavior (mostly resulting in slow execution) (https://github.com/cleolibrary/CLEO-Redux/issues/21)
-- fix an issue making coronas created in CLEO scripts not render (https://github.com/cleolibrary/CLEO-Redux/issues/23)
+- Исправлена критическая ошибка в планировщике сценариев CS, вызывающую ненормальное поведение (в основном приводящее к медленному выполнению) (https://github.com/cleolibrary/CLEO-Redux/issues/21)
+- Исправлена проблема, из-за которой короны, созданные в CLEO-скриптах, не отображались (https://github.com/cleolibrary/CLEO-Redux/issues/23)
 
 ### 0.8.2 - Dec 4, 2021
 
-- CLEO now uses AppData directory if there is no write permissions in the current game directory (see [First Time Setup](README.md#first-time-setup) note)
-- add fluent interface for methods on constructible entities. See demo: https://www.youtube.com/watch?v=LLgJ0fWbklg
-- fix an issue when a script could run during game pause (when the game menu is active)
+- CLEO теперь использует каталог AppData, если в текущем каталоге игры нет прав на запись (см. примечание [Первоначальная настройка](readme.md#первичная-настройка))
+- Добавлен свободный интерфейс для методов конструируемых сущностей. Посмотреть демонстрацию: https://www.youtube.com/watch?v=LLgJ0fWbklg
+- Исправлена ​​проблема, когда скрипт мог запускаться во время паузы в игре (при активном игровом меню)
 
 ### 0.8.1 - Dec 1, 2021
 
-- add support for San Andreas: The Definitive Edition v1.0.0.14718 (Title Update 1.03)
+- Добавили поддержку San Andreas: The Definitive Edition v1.0.0.14718 (название обновления 1.03)
 
 ### 0.8.0 - Nov 25, 2021
 
-- new 64-bit version of CLEO Redux (cleo_redux64.asi). It's intended to work only with remastered games.
-- [initial support](README.md#compatibility-with-the-trilogy-the-definitive-edition) for San Andreas: The Definitive Edition v1.0.0.14296 and v1.0.0.14388
-- fix an issue when scripts might not reload after loading a save file
+- Новая 64-битная версия CLEO Redux (cleo_redux64.asi).  Она предназначена для работы только с обновленными играми
+- [Первоначальная поддержка](readme.md#совместимость-с-the-trilogy-the-definitive-edition) для San Andreas: The Definitive Edition v1.0.0.14296 и v1.0.0.14388
+- Исправлена ​​проблема, когда скрипты могли не перезагружаться после загрузки файла сохранения
 
-#### KNOWN ISSUES:
+#### ИЗВЕСТНЫЕ НЕДОЧЁТЫ:
 
-- `showTextBox` function does not work in JavaScript in San Andreas: The Definitive Edition
-- CLEO does not display its version in the main menu in San Andreas: The Definitive Edition
+- Функция `showTextBox` не работает в JavaScript в San Andreas: The Definitive Edition
+- CLEO не отображает свою версию в главном меню в San Andreas: The Definitive Edition
 
-#### BREAKING CHANGES
+#### ОСНОВНЫЕ ИЗМЕНЕНИЯ
 
-- minimum required version of `gta3.json` is `0.100`
-- minimum required version of `vc.json` is `0.145`
-- minimum required version of `sa.json` is `0.175`
+- Минимальная требуемая версия `gta3.json` – `0.100`
+- Минимальная требуемая версия `vc.json` – `0.145`
+- Минимальная требуемая версия `vc.json` – `0.175`
 
 ### 0.7.6 - Nov 18, 2021
 
-- CLEO Redux now works on Windows 7
+- CLEO Redux теперь работает на Windows 7
 
 ### 0.7.5 - Nov 13, 2021
 
-- fix: some custom command could have unconventional arguments order (e.g. [0AA4 GET_DYNAMIC_LIBRARY_PROCEDURE](https://library.sannybuilder.com/#/sa/CLEO/0AA4))
-- fix: "if and set" commands had incorrect definitions in \*.d.ts file
+- fix: некоторые пользовательские команды могли иметь нестандартный порядок аргументов (например, [0AA4 GET_DYNAMIC_LIBRARY_PROCEDURE](https://library.sannybuilder.com/#/sa/CLEO/0AA4))
+- fix: команды if и set имели некорректные определения в файле \*.d.ts
 
 ### 0.7.4 - Nov 11, 2021
 
-- ignore mobile and console command definitions (fixes https://github.com/cleolibrary/CLEO-Redux/issues/6)
+- Игнорирование определения мобильных и консольных команд (исправлено https://github.com/cleolibrary/CLEO-Redux/issues/6)
 
-#### BREAKING CHANGE
+#### ГЛАВНОЕ ИЗМЕНЕНИЕ
 
-- minimum required version of `vc.json` is `0.144`
-- minimum required version of `sa.json` is `0.168`
+- Минимальная требуемая версия `vc.json` – `0.144`
+- Минимальная требуемая версия `sa.json` – `0.168`
 
 ### 0.7.3 - Nov 8, 2021
 
-- ensure custom scripts have unique [in-game names](https://library.sannybuilder.com/#/vc/default/03A4) when the first 7 characters of their file names are the same (e.g. scripts in files `spawner_a.cs`, `spawner_b.cs`, `spawner_c.cs` would now have names `spawner`, `spawn01`, `spawn02` respectively)
-- fix: internal address error could make a JS script execute a wrong instruction
+- Убедитесь, что пользовательские скрипты имеют уникальные [внутриигровые имена](https://library.sannybuilder.com/#/vc/default/03A4), если первые 7 символов в именах их файлов совпадают (например, скрипты в файлах `spawner_a.  cs`, `spawner_b.cs`, `spawner_c.cs` теперь будут иметь имена `spawner`, `spawn01`, `spawn02` соответственно)
+- fix: внутренняя ошибка адреса могла привести к тому, что JS-скрипт выполнил неправильную инструкцию
 
-#### BREAKING CHANGE
+#### ГЛАВНОЕ ИЗМЕНЕНИЕ
 
-- minimum required version of `sa.json` is `0.167`
+- Минимальная требуемая версия `sa.json` – `0.167`
 
 ### 0.7.2 - Nov 4, 2021
 
-- add `ONMISSION` variable that can be used to manipulate the global player's on a mission status
+- Добавлена константа `ONMISSION`, которую можно использовать для управления глобальным игроком в статусе миссии
 
 ```js
 if (!ONMISSION) {
@@ -176,118 +182,118 @@ if (!ONMISSION) {
 }
 ```
 
-#### BREAKING CHANGES
+#### ОСНОВНЫЕ ИЗМЕНЕНИЯ
 
-- using `new` operator on a static object (for which Sanny Builder Library does not define a constructor, e.g. `Audio` or `Hud`) now throws an error:
+- Использование оператора `new` для статического объекта (для которого Sanny Builder Library не определяет конструктор, например, `Audio` или `Hud`) теперь вызывает ошибку:
 
 ```js
-var hud = new Hud(); // error: Hud is not constructable
+var hud = new Hud(); // error: Худ нельзя построить
 ```
 
-- minimum required version of `sa.json` is `0.166`
+- Минимальная требуемая версия `sa.json` – `0.166`
 
 ### 0.7.1 - Nov 2, 2021
 
-- new static function `Memory.Translate` to get memory address of a function or variable by its name (see [documentation](using-memory.md#finding-memory-addresses-in-re3-and-revc))
-- new function `exit` to terminate the script early
+- Новая статическая функция `Memory.Translate` для получения адреса памяти функции или переменной по ее имени (см. [документацию](using-memory.md#поиск-адресов-памяти-в-re3-и-revc))
+- Новая функция `exit` для досрочного завершения скрипта
 
 ### 0.7.0 - Oct 30, 2021
 
-- CLEO Redux can now work as an extension to CLEO Library (see [Relation to CLEO Library](README.md#relation-to-cleo-library))
-- CLEO Redux is now able to execute JavaScript in GTA San Andreas with CLEO 4.4 installed
-- new config parameter `AllowCs` to control `*.cs` scripts
-- fix: ini config was ignored if there were missing parameters in the `cleo.ini`
+- CLEO Redux теперь может работать как расширение библиотеки CLEO (см. [Отношение к библиотеке CLEO](readme.md#связь-с-cleo-library))
+- CLEO Redux теперь может выполнять JavaScript в GTA San Andreas с установленным CLEO 4.4
+- Новый параметр конфигурации `AllowCs` для управления сценариями `*.cs`
+- fix: ini config игнорировался, если в `cleo.ini` отсутствовали параметры
 
-#### BREAKING CHANGE
+#### ГЛАВНОЕ ИЗМЕНЕНИЕ
 
-CLEO Redux' primary distribution file has been renamed to `cleo_redux.asi`. To avoid conflicts with previously installed versions of CLEO Redux manually delete old `cleo.asi` file from the game directory.
+Файл основного дистрибутива CLEO Redux был переименован в `cleo_redux.asi`.  Во избежание конфликтов с ранее установленными версиями CLEO Redux вручную удалите старый файл `cleo.asi` из папки с игрой
 
 ### 0.6.2 - Oct 11, 2021
 
-- add [CALL_FUNCTION](https://library.sannybuilder.com/#/gta3/CLEO/0AA5), [CALL_FUNCTION_RETURN](https://library.sannybuilder.com/#/gta3/CLEO/0AA7), [CALL_METHOD](https://library.sannybuilder.com/#/gta3/CLEO/0AA6), [CALL_METHOD_RETURN](https://library.sannybuilder.com/#/gta3/CLEO/0AA8). See [Using Memory](using-memory.md#calling-foreign-functions) for more information.
-- update typings to include links to relevant documentation
+- Добавлены [CALL_FUNCTION](https://library.sannybuilder.com/#/gta3/CLEO/0AA5), [CALL_FUNCTION_RETURN](https://library.sannybuilder.com/#/gta3/CLEO/0AA7), [CALL_METHOD](https://library.sannybuilder.com/#/gta3/CLEO/0AA6), [CALL_METHOD_RETURN](https://library.sannybuilder.com/#/gta3/CLEO/0AA8). См. [Использование памяти](using-memory.md#вызов-внешних-функций) для получения дополнительной информации
+- Обновлена типизация, чтобы включить ссылки на соответствующую документацию
 
 ### 0.6.1 - Oct 8, 2021
 
-- fix crash in `Memory` class methods
+- Исправлен сбой в методах класса `Memory`
 
 ### 0.6.0 - Oct 8, 2021
 
-- add [INT_ADD](https://library.sannybuilder.com/#/gta3/CLEO/0A8E), [INT_SUB](https://library.sannybuilder.com/#/gta3/CLEO/0A8F), [INT_MUL](https://library.sannybuilder.com/#/gta3/CLEO/0A90), [INT_DIV](https://library.sannybuilder.com/#/gta3/CLEO/0A91) commands
-- math operations are now available through the native JavaScript `Math` object where possible ([see documentation](using-math.md)).
-- new static methods in `Memory` class. See [documentation](using-memory.md) for more info
+- Добавлены комманды [INT_ADD](https://library.sannybuilder.com/#/gta3/CLEO/0A8E), [INT_SUB](https://library.sannybuilder.com/#/gta3/CLEO/0A8F), [INT_MUL](https://library.sannybuilder.com/#/gta3/CLEO/0A90), [INT_DIV](https://library.sannybuilder.com/#/gta3/CLEO/0A91)
+- Математические операции теперь доступны через собственный объект JavaScript `Math`, где это возможно ([см. документацию](using-math.md))
+- Новые статические методы в классе `Memory`.  См. [документацию](using-memory.md) для получения дополнительной информации
 
-#### BREAKING CHANGES
+#### ОСНОВНЫЕ ИЗМЕНЕНИЯ
 
-- `asFloat` has been removed in favor of `Memory.ToFloat`
-- class `Object` has been renamed to `ScriptObject` to avoid conflicts with native JavaScript Object.
-- deprecated command `isKeyPressed` has been deleted. Use `Pad.isKeyPressed` instead
+- `asFloat` был удален в пользу `Memory.ToFloat`
+- Класс `Object` был переименован в `ScriptObject`, чтобы избежать конфликтов с собственным JavaScript Object
+- Устаревшая команда isKeyPressed удалена. Вместо этого используйте `Pad.isKeyPressed`
 
 ### 0.5.3 - Oct 2, 2021
 
-- add a new built-in JavaScript function `asFloat` to cast an integer value returned by the `Memory.Read` command to a floating point number ([IEEE 754](https://en.wikipedia.org/wiki/IEEE_754))
+- Добавлена новая встроенная функция JavaScript `asFloat` для приведения целочисленного значения, возвращаемого командой `Memory.Read`, к числу с плавающей точкой ([IEEE 754](https://en.wikipedia.org/wiki/IEEE_754))
 
 ```js
-var gravity = asFloat(Memory.Read(gravityAddress, 4, false)); // the gravity var now holds a floating-point value
+var gravity = asFloat(Memory.Read(gravityAddress, 4, false)); // переменная гравитации теперь содержит значение с плавающей точкой
 ```
 
-- auto-generated `*.d.ts` files now make a distinction between integer and floating-point parameters, VS Code autocomplete now displays them with `int` and `float` types respectively
-- auto-generated `*.d.ts` files now have `<reference no-default-lib="true"/>` so it is no longer needed to add this line in a script file to exclude unsupported JS commands from autocomplete
-- fix: `op` incorrectly returned any single value as integer regardless of the type information
-- fix: `showTextBox` command was missing in the `cleo.log` with `logOpcodes=1`
+- Автоматически сгенерированные файлы `*.d.ts` теперь делают различие между целыми параметрами и параметрами с плавающей точкой, автозаполнение VS Code теперь отображает их с типами `int` и `float` соответственно
+- Автоматически сгенерированные файлы `*.d.ts` теперь имеют `<reference no-default-lib="true"/>`, поэтому больше не нужно добавлять эту строку в файл скрипта, чтобы исключить неподдерживаемые команды JS из автозаполнения
+- fix: `op` некорректно возвращал любое одиночное значение как целое число независимо от информации о типе
+- fix: команда `showTextBox` отсутствовала в `cleo.log` с `logOpcodes=1`
 
 ### 0.5.2 - Sep 30, 2021
 
-- CLEO now checks for updates and notifies in the main menu (can be disabled with `CheckUpdates=0`)
-- command `isKeyPressed` has been deprecated, use `Pad.IsKeyPressed` instead
-- fix: deadlock causing timeouts in JS scripts
+- CLEO теперь проверяет наличие обновлений и уведомляет в главном меню (можно отключить с помощью `Check Updates=0`)
+- Команда `isKeyPressed` устарела, вместо нее используйте `Pad.IsKeyPressed`
+- fix:  исправлена взаимоблокировка, вызывающая тайм-ауты в JS-скриптах
 
 ### 0.5.1 - Sep 28, 2021
 
-- add support for `Boolean`, `null` and `undefined` as arguments of the `op` command
-- allow arbitrary size in `0A8C WRITE_MEMORY` to fill a continiuos block of memory with a single byte value
-- fix: after reloading the game JS scripts could have been duplicated
+- Добавлена поддержка `Boolean`, `null` и `undefined` в качестве аргументов команды `op`
+- Разрешён произвольный размер в `0A8C WRITE MEMORY`, чтобы заполнить непрерывный блок памяти одним байтовым значением
+- fix: после перезагрузки игры JS-скрипты могли дублироваться
 
 ### 0.5.0 - Sep 25, 2021
 
-- add support for GTA III 1.0 and GTA VC 1.0
-- add support for auto-incrementing variables `TIMERA` and `TIMERB`
-- add permission levels for unsafe opcodes
-- add two unsafe opcodes: `0A8C WRITE_MEMORY` and `0A8D READ_MEMORY`
-- fix: custom opcodes did not work in main.scm
-- fix: gosub did not work in CS scripts
-- fix: race condition caused false-positive timeouts for JS scripts
+- Добавлена поддержка GTA III 1.0 и GTA VC 1.0
+- Добавлена поддержка автоматически увеличивающихся переменных `TIMERA` и `TIMERB`
+- Добавлены уровни разрешений для небезопасных кодов операций
+- Добавлены два небезопасных кода операции: `0A8C WRITE_MEMORY` и `0A8D READ_MEMORY`
+- fix: пользовательские опкоды не работали в main.scm
+- fix: gosub не работал в CS скриптах
+- fix: состояние гонки вызывало ложноположительные тайм-ауты для JS-скриптов
 
 ### 0.4.0 - Sep 2, 2021
 
-- add bindings for all opcodes in JS scripts
-- CLEO can now generate a `*.d.ts` file for autocomplete in VS Code
-- add hot reload for `*.js` files
-- fix: opcodes log did not work even with `LogOpcodes=1`
+- Добавлены привязки для всех опкодов в JS-скриптах
+- CLEO теперь может генерировать файл `*.d.ts` для автозаполнения в VS Code.
+- Добавлена горячая перезагрузка для файлов `*.js`
+- fix: лог опкодов не работал даже с `LogOpcodes=1`
 
 ### 0.3.1 - Aug 21, 2021
 
-- add `op` function to execute any opcode from JavaScript code
-- add `GAME` constant to check the current host game
-- CLEO now keeps its settings in `CLEO/.config/cleo.ini` created on the first run
-- JavaScript support can be disabled using `AllowJs=0` setting
+- Добавлена функция `op` для выполнения любого кода операции из кода JavaScript
+- Добавлена константа `GAME`, чтобы проверить текущую хост-игру
+- CLEO теперь хранит свои настройки в `CLEO/.config/cleo.ini`, созданном при первом запуске.
+- Поддержку JavaScript можно отключить с помощью параметра `AllowJs=0`
 
 ### 0.3.0 - Aug 17, 2021
 
-- add experimental VM executing ECMAScript 5 (JavaScript)
+- Добавлена эксперементальная виртуальная машина, выполняющая ECMAScript 5 (JavaScript)
 
 ### 0.2.1 - Aug 14, 2021
 
-- watch the CLEO directory and start/stop scripts if a CS file has been added or deleted
+- При просмотре каталога CLEO запускаются/останавливливаются скрипты, если файл CS был добавлен или удален
 
 ### 0.2.0 - Aug 13, 2021
 
-- add hot reload
+- Добавлена горячая перезагрузка
 
 ### 0.1.2 - Aug 13, 2021
 
-- add support for reVC
+- Добавлена поддержка reVC
 
 ### 0.1.1 - Aug 12, 2021
 
-- initial release
+- Первый выпуск
