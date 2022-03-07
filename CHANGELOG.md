@@ -2,7 +2,7 @@
   
 - add support for The Definitive Edition Title Update 1.04 (GTA III DE 1.0.0.15284, VC DE 1.0.0.15399, SA DE 1.0.0.15483) 
 - fix an issue with string arguments in Memory call commands in GTA San Andreas (https://github.com/cleolibrary/CLEO-Redux/issues/36) 
-- fix an issue with scripts not working if the path to the game directory has square brackets ​`[`​, ​`]` 
+- fix an issue with scripts not working if the path to the game directory has square brackets `[`, `]` 
   
 ### 0.9.1 - Feb 22, 2022
 
@@ -34,25 +34,25 @@ https://github.com/cleolibrary/CLEO-Redux/blob/master/README.md#installation
 
 **BREAKING CHANGES**
 
-| Game                                | File                                                                                                 | Minumum Required Version |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------------- | ------------------------ |
-| GTA III, re3                        | [gta3.json](https://github.com/sannybuilder/library/blob/master/gta3/gta3.json)                      | `0.208`                  |
-| GTA VC, reVC                        | [vc.json](https://github.com/sannybuilder/library/blob/master/vc/vc.json)                            | `0.210`                  |
-| GTA San Andreas (Classic) 1.0       | [sa.json](https://github.com/sannybuilder/library/blob/master/sa/sa.json)                            | `0.210`                  |
-| GTA III: The Definitive Edition     | [gta3_unreal.json](https://github.com/sannybuilder/library/blob/master/gta3_unreal/gta3_unreal.json) | `0.210`                  |
-| Vice City: The Definitive Edition   | [vc_unreal.json](https://github.com/sannybuilder/library/blob/master/vc_unreal/vc_unreal.json)       | `0.212`                  |
-| San Andreas: The Definitive Edition | [sa_unreal.json](https://github.com/sannybuilder/library/blob/master/sa_unreal/sa_unreal.json)       | `0.216`                  |
+| Игра                                | Файл                                                                                                 | Минимальная требуемая версия |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------- |
+| GTA III, re3                        | [gta3.json](https://github.com/sannybuilder/library/blob/master/gta3/gta3.json)                      | `0.208`                      |
+| GTA VC, reVC                        | [vc.json](https://github.com/sannybuilder/library/blob/master/vc/vc.json)                            | `0.210`                      |
+| GTA San Andreas (Classic) 1.0       | [sa.json](https://github.com/sannybuilder/library/blob/master/sa/sa.json)                            | `0.210`                      |
+| GTA III: The Definitive Edition     | [gta3_unreal.json](https://github.com/sannybuilder/library/blob/master/gta3_unreal/gta3_unreal.json) | `0.210`                      |
+| Vice City: The Definitive Edition   | [vc_unreal.json](https://github.com/sannybuilder/library/blob/master/vc_unreal/vc_unreal.json)       | `0.212`                      |
+| San Andreas: The Definitive Edition | [sa_unreal.json](https://github.com/sannybuilder/library/blob/master/sa_unreal/sa_unreal.json)       | `0.216`                      |
 
 ### 0.9.0 - Jan 23, 2022
 
-- add support for JS scripts in **GTA III: The Definitive Edition (v1.0.0.14718)** and **Vice City: The Definitive Edition (v1.0.0.14718)** (some limitations apply, see [Feature support](https://github.com/cleolibrary/CLEO-Redux/wiki/Feature-Support-Matrix) for the details)
-- add support for modern ES6+ syntax (arrow functions, const/let, classes, more methods in the standard library, etc), see [Mines Drop script](examples/mines-drop.js) as an example
-- add support for [importing other scripts and JSON files](README.md#Imports)
+- Добавлена поддержка JS-скриптов в **GTA III: The Definitive Edition (v1.0.0.14718)** и **Vice City: The Definitive Edition (v1.0.0.14718)** (применяются некоторые ограничения, см. [Поддержка функций ](https://github.com/cleolibrary/CLEO-Redux/wiki/Feature-Support-Matrix) для подробностей)
+- Добавлена поддержка современного синтаксиса ES6+ (стрелочные функции, const/let, классы, дополнительные методы в стандартной библиотеке и т.д.), см. в качестве примера [скрипт Mines Drop](examples/mines-drop.js)
+- Добавлена поддержка [импорта других скриптов и файлов JSON](readme.md#импорт)
 
-For 64-bit games (The Trilogy):
+Для 64-bit игр (The Trilogy):
 
-- you can now call game functions with floating-point arguments - thanks to @ThirteenAG.
-- new command `Memory.CallFunctionReturnFloat` that is similar to `Memory.CallFunctionReturn` but is used for functions that return a floating-point number
+- Теперь вы можете вызывать игровые функции с аргументами с плавающей точкой — благодаря @ThirteenAG
+- Новая команда `Memory.CallFunctionReturnFloat`, похожая на `Memory.CallFunctionReturn`, но используемая для функций, возвращающих число с плавающей запятой:
 
 ```js
 let x = Memory.FromFloat(123.456);
@@ -60,7 +60,7 @@ let y = Memory.FromFloat(456.555);
 let groundZ = Memory.CallFunctionReturnFloat(0x100cc50, true, 2, x, y);
 ```
 
-- new convenience method `Memory.Fn.X64Float` that can be used for functions that return a floating-point number:
+- Новый удобный метод `Memory.Fn.X64Float`, который можно использовать для функций, возвращающих число с плавающей точкой:
 
 ```js
 let CWorldFindGroundZForCoord = Memory.Fn.X64Float(0x100cc50, true);
@@ -72,11 +72,11 @@ let groundZ = CWorldFindGroundZForCoord(x, y);
 ### 0.8.6 - Jan 12, 2022
 
 - Добавлены команды [CALL_FUNCTION](https://library.sannybuilder.com/#/sa_unreal/CLEO/0C08) и [CALL_FUNCTION_RETURN](https://library.sannybuilder.com/#/sa_unreal/CLEO/0C09) в San Andreas: The Definitive Edition
-- add `Memory.Fn.X64` convenience methods for [calling functions from JavaScript on the x64 platform](using-memory-64.md#calling-foreign-functions)
-- `showTextBox` now works in San Andreas: The Definitive Edition
-- fix an issue with FxtStore object not showing in VS Code autocomplete
-- fix an issue with text draw not working in GTA San Andreas
-- fix an issue in CLEO dev builds causing the game crash on startup while checking for an update
+- Добавлены удобные методы `Memory.Fn.X64` для [вызова функций из JavaScript на платформе x64](using-memory-64.md#вызов-внешних-функций)
+- `showTextBox` теперь работает в San Andreas: The Definitive Edition
+- Исправлена проблема с объектом FxtStore, не отображаемым в автозаполнении VS Code
+- Исправлена проблема с неработающей отрисовкой текста в GTA San Andreas
+- Исправлена проблема в сборках CLEO dev, из-за которой игра вылетала при запуске при проверке обновлений
 
 #### ГЛАВНОЕ ИЗМЕНЕНИЕ
 
@@ -86,8 +86,8 @@ let groundZ = CWorldFindGroundZForCoord(x, y);
 
 - Добавлена поддержка [статических файлов FXT] (using-fxt.md#статические-файлы-fxt) в папке `CLEO_TEXT`
 - Добавить поддержку [частного хранилища FXT] (используя-fxt.md#fxtstore) в каждом сценарии JS
-- Исправлена ​​проблема, когда [права доступа к скриптам](readme.md#разрешения) не проверялись для CLEO-скриптов
-- Исправлена ​​проблема, когда игра могла вылетать при перезагрузке скрипта
+- Исправлена проблема, когда [права доступа к скриптам](readme.md#разрешения) не проверялись для CLEO-скриптов
+- Исправлена проблема, когда игра могла вылетать при перезагрузке скрипта
 - [Пользовательские опкоды CLEO](readme.md#совместимость-с-the-trilogy-the-definitive-edition) (`0C00`-`0C07`) теперь можно использовать в main.scm в San Andreas: DE
 
 ### 0.8.4 - Dec 17, 2021
@@ -95,11 +95,11 @@ let groundZ = CWorldFindGroundZForCoord(x, y);
 - Для San Andreas: The Definitive Edition:
 
   - Новые коды операций `0C06 WRITE_MEMORY` и `0C07 READ_MEMORY`, а также соответствующие команды JavaScript: `Memory.Write` и `Memory.Read`.  [Прочитайте руководство](using-memory-64.md) для получения дополнительной информации
-  - Исправлена ​​проблема с кодами операций `0C01`, `0C02`, `0C03`, `0C04`, приводившая к сбою игры
+  - Исправлена проблема с кодами операций `0C01`, `0C02`, `0C03`, `0C04`, приводившая к сбою игры
 
 - Для всех игр:
   - Улучшена стабильность JS-скриптов (https://github.com/cleolibrary/CLEO-Redux/issues/22)
-  - Исправлена ​​проблема, когда права доступа не проверялись для CLEO-скриптов
+  - Исправлена проблема, когда права доступа не проверялись для CLEO-скриптов
 
 #### ОСНОВНЫЕ ИЗМЕНЕНИЯ
 
@@ -121,7 +121,7 @@ CLEO Redux для San Andreas: Definitive Edition теперь использу�
 
 - CLEO теперь использует каталог AppData, если в текущем каталоге игры нет прав на запись (см. примечание [Первоначальная настройка](readme.md#первичная-настройка))
 - Добавлен свободный интерфейс для методов конструируемых сущностей. Посмотреть демонстрацию: https://www.youtube.com/watch?v=LLgJ0fWbklg
-- Исправлена ​​проблема, когда скрипт мог запускаться во время паузы в игре (при активном игровом меню)
+- Исправлена проблема, когда скрипт мог запускаться во время паузы в игре (при активном игровом меню)
 
 ### 0.8.1 - Dec 1, 2021
 
@@ -131,7 +131,7 @@ CLEO Redux для San Andreas: Definitive Edition теперь использу�
 
 - Новая 64-битная версия CLEO Redux (cleo_redux64.asi).  Она предназначена для работы только с обновленными играми
 - [Первоначальная поддержка](readme.md#совместимость-с-the-trilogy-the-definitive-edition) для San Andreas: The Definitive Edition v1.0.0.14296 и v1.0.0.14388
-- Исправлена ​​проблема, когда скрипты могли не перезагружаться после загрузки файла сохранения
+- Исправлена проблема, когда скрипты могли не перезагружаться после загрузки файла сохранения
 
 #### ИЗВЕСТНЫЕ НЕДОЧЁТЫ:
 
