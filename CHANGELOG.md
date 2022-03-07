@@ -1,19 +1,19 @@
 ### 0.9.2 - Mar 04, 2022 
   
-- add support for The Definitive Edition Title Update 1.04 (GTA III DE 1.0.0.15284, VC DE 1.0.0.15399, SA DE 1.0.0.15483) 
-- fix an issue with string arguments in Memory call commands in GTA San Andreas (https://github.com/cleolibrary/CLEO-Redux/issues/36) 
-- fix an issue with scripts not working if the path to the game directory has square brackets `[`, `]` 
+- Добавлена поддержка для The Definitive Edition Название обновления 1.04 (GTA III DE 1.0.0.15284, VC DE 1.0.0.15399, SA DE 1.0.0.15483) 
+- Исправлена проблема со строковыми аргументами в командах вызова памяти в GTA San Andreas (https://github.com/cleolibrary/CLEO-Redux/issues/36) 
+- Исправлена ​​проблема с неработающими сценариями, если путь к каталогу с игрой заключен в квадратные скобки `[`, `]` 
   
 ### 0.9.1 - Feb 22, 2022
 
-- add [SDK for developing custom commands](using-sdk.md) in C++ and Rust
-- add support for fallible commands in JS (also known as `IF and SET` commands in SCM scripts), they return `undefined` when failing, e.g. `DynamicLibrary.Load` or `Char.IsInAnySearchlight`)
-- two new plugins adding commands to work with DLL (`dylib.cleo`) and INI files (`IniFiles.cleo`) in all supported games
-- add `__dirname` variable in JS scripts that resolves to the current file's directory
-- add a new function [native](README.md#custom-bindings) that calls a scripting command by name (similar to `op`):
+- Добавлен [SDK для разработки пользовательских команд](using-sdk.md) с помощью C++ и Rust
+- Добавлена поддержка ошибочных команд в JS (также известных как команды `IF и SET` в сценариях SCM), они возвращают `undefined` при сбое, например.  `DynamicLibrary.Load` или `Char.IsInAnySearchlight`)
+- Два новых плагина, добавляющих команды для работы с DLL (`dylib.cleo`) и INI-файлами (`IniFiles.cleo`) во всех поддерживаемых играх
+- Добавлена константа `__dirname` в сценарии JS, которая разрешается в каталог текущего файла
+- Добавлена новая функция [native](readme.md#пользовательские-привязки1), которая вызывает команду сценария по имени (аналогично `op`):
 
 ```ts
-/** Executes a named command with the given arguments */
+/** Выполняет именованную команду с заданными аргументами */
 declare function native<T>(name: string, ...args: any[]): T;
 ```
 
@@ -21,18 +21,18 @@ declare function native<T>(name: string, ...args: any[]): T;
 const lib = native("LOAD_DYNAMIC_LIBRARY", "test.dll");
 ```
 
-- fix a rounding issue with floating-point numbers in GTA 3
-- fix an issue with imports not working in JS when the CLEO folder is located in the AppData directory
-- fix an issue with the `showTextBox` command in San Andreas displaying some garbage text
-- fix a conversion error when the `showTextBox` command is given an integer argument
-- fix an issue with scripts permissions not being validated for JS scripts
-- fix an issue when the object returned as a result of some commands (`Object.GrabEntityOnRope()`, `Heli.GrabEntityOnWinch()` and like) did not have relevant fields wrapped in a class instance
+- Исправлена проблема с округлением чисел с плавающей точкой в GTA 3
+- Исправлена ​​проблема с неработающим импортом в JS, когда папка CLEO находится в каталоге AppData
+- Исправлена ​​ошибка, из-за которой команда `showTextBox` в San Andreas отображала мусорный текст
+- Исправлена ошибка преобразования, когда команде `showTextBox` дается целочисленный аргумент
+- Исправлена проблема с разрешениями сценариев, которые не проверялись для сценариев JS
+- Исправлена ​​проблема, когда объект, возвращаемый в результате выполнения некоторых команд (`Object.GrabEntityOnRope()`, `Heli.GrabEntityOnWinch()` и т.п.), не имел соответствующих полей, завернутых в экземпляр класса
 
-**INSTALLATION STEPS**
+**ЭТАПЫ УСТАНОВКИ**
 
 https://github.com/cleolibrary/CLEO-Redux/blob/master/README.md#installation
 
-**BREAKING CHANGES**
+**ОСНОВНЫЕ ИЗМЕНЕНИЯ**
 
 | Игра                                | Файл                                                                                                 | Минимальная требуемая версия |
 | ----------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------- |
