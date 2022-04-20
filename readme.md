@@ -290,12 +290,12 @@ CLEO Redux генерирует типизации для всех поддер�
 
 | Игра                                     | Файл                                                                                                 | Минимальная требуемая версия |
 | ---------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------- |
-| GTA III, re3                             | [gta3.json](https://github.com/sannybuilder/library/blob/master/gta3/gta3.json)                      | `0.200`                      |
-| GTA VC, reVC                             | [vc.json](https://github.com/sannybuilder/library/blob/master/vc/vc.json)                            | `0.201`                      |
-| GTA San Andreas (Классическая) 1.0       | [sa.json](https://github.com/sannybuilder/library/blob/master/sa/sa.json)                            | `0.202`                      |
-| GTA III: The Definitive Edition          | [gta3_unreal.json](https://github.com/sannybuilder/library/blob/master/gta3_unreal/gta3_unreal.json) | `0.204`                      |
-| Vice City: The Definitive Edition        | [vc_unreal.json](https://github.com/sannybuilder/library/blob/master/vc_unreal/vc_unreal.json)       | `0.205`                      |
-| San Andreas: The Definitive Edition      | [sa_unreal.json](https://github.com/sannybuilder/library/blob/master/sa_unreal/sa_unreal.json)       | `0.209`                      |
+| GTA III, re3                             | [gta3.json](https://github.com/sannybuilder/library/blob/master/gta3/gta3.json)                      | `0.218`                      |
+| GTA VC, reVC                             | [vc.json](https://github.com/sannybuilder/library/blob/master/vc/vc.json)                            | `0.220`                      |
+| GTA San Andreas (Классическая) 1.0       | [sa.json](https://github.com/sannybuilder/library/blob/master/sa/sa.json)                            | `0.237`                      |
+| GTA III: The Definitive Edition          | [gta3_unreal.json](https://github.com/sannybuilder/library/blob/master/gta3_unreal/gta3_unreal.json) | `0.213`                      |
+| Vice City: The Definitive Edition        | [vc_unreal.json](https://github.com/sannybuilder/library/blob/master/vc_unreal/vc_unreal.json)       | `0.215`                      |
+| San Andreas: The Definitive Edition      | [sa_unreal.json](https://github.com/sannybuilder/library/blob/master/sa_unreal/sa_unreal.json)       | `0.221`                      |
 
 ### Жизненный цикл скрипта
 
